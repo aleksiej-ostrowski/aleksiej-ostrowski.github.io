@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aleksiej Ostrowski. Personal webpage">
  
-    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-3.css">
+    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-6.css">
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=4.css">
 
     <link rel="stylesheet"  href="../../../static/highlight/default.min.css">
@@ -91,7 +91,46 @@
 	    <section class="blog-list px-3 py-5 p-md-5">
 		    <div class="container">
 
-                			    <div class="item mb-5">
+                 
+
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/GDkylMYlXDGB/index.html">Der süße Brei</a></h3>
+            <div class="meta mb-1"><span><a href="../../deutsch/index.html">deutsch</a></span><span><a href="../../notes/index.html">notes</a></span></div>
+            
+            <div>
+            
+                das Zitat
+                <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+                <p class="mb-2">                
+                Es war einmal ein armes frommes Mädchen, das lebte mit seiner Mutter allein, und sie hatten nichts mehr zu essen. Da gieng das Kind hinaus in den Wald, und begegnete ihm da eine alte Frau, die wußte seinen Jammer schon und schenkte ihm ein Töpfchen, zu dem sollt es sagen „Töpfchen, koche,“ so kochte es guten süßen Hirsenbrei, und wenn es sagte „Töpfchen, steh,“ so hörte es wieder auf zu kochen. Das Mädchen brachte den Topf seiner Mutter heim, und nun waren sie ihrer Armuth und ihres Hungers ledig und aßen süßen Brei so oft sie wollten. Auf eine Zeit war das Mädchen ausgegangen, da sprach die Mutter „Töpfchen, koche,“ da kocht es, und sie ißt sich satt; nun will sie daß das Töpfchen wieder aufhören soll, aber sie weiß das Wort nicht. Also kocht es fort, und der Brei steigt über den Rand hinaus und kocht immer zu, die Küche und das ganze Haus voll, und das zweite Haus und dann die Straße, als wollts die ganze Welt satt machen, und ist die größte Noth, und kein Mensch weiß sich da zu helfen. Endlich, wie nur noch ein einziges Haus übrig ist, da kommt das Kind heim, und spricht nur „Töpfchen, steh,“ da steht es und hört auf zu kochen; und wer wieder in die Stadt wollte, der mußte sich durchessen.
+                </p>
+                <footer class="blockquote-footer">Brüder Grimm</footer>
+                </blockquote>
+
+                <p class="mb-2">  
+                
+                Meine Fragen:
+                
+                <ol>
+                <li>Warum hat das Mädchen ihr Zauberwort nicht mit ihrer Mutter geteilt?</li>
+                <li>Warum hat das Mädchen ihren süßen Brei nicht zuerst mit allen geteilt?</li>
+                <li>Warum hat die alte Frau nur mit dem Mädchen geteilt (nicht mit allen)? </li>
+                </ol>
+                
+                Immerhin kann das Töpfchen unendlich viel Brei kostenlos kochen.
+                </p>
+                
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+			    <div class="item mb-5">
 				    <div class="media">
 					    <div class="media-body">
 						    <h3 class="title mb-1"><a href="../../../id/86FBlaC2mtHN/index.html">How to use the program Data Entry</a></h3>
@@ -311,198 +350,96 @@ func main () {
     <hr/> 
 </div><!--//item-->
 
- 
-
 <div class="item mb-5">
     <div class="media">
         <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/pvT5fnjCkZXK/index.html">Add Two Numbers</a></h3>
-            <div class="meta mb-1"><span><a href="../../golang/index.html">golang</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
+            <h3 class="title mb-1"><a href="../../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
+            <div class="meta mb-1"><span><a href="../../cpp/index.html">cpp</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
             
             <div class="intro">
             
-               
                 <pre>                       
-                <code class="go">
+                <code class="cpp">
                 
 /*
 
-#---------------------------------------------------#
-#                                                   #
-#  version 0.0.1                                    #
-#  https://leetcode.com/problems/add-two-numbers/   #
-#                                                   #
-#  Aleksiej Ostrowski, 2020                         #
-#                                                   #
-#  https://aleksiej.com                             #
-#                                                   #
-#---------------------------------------------------#
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
 
 */
 
-package main
 
-import (
-    "fmt"
-)
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
 
-type ListNode struct {
-    Val  int
-    Next *ListNode
-}
+std::mutex m;
+std::condition_variable cv;
 
-/*
+int flag = 1;
 
-func reverseList(l *ListNode) *ListNode {
+void task1(const int n)
+{
+    int i = 1;
 
-    temp := []int{}
+    for(;;) {
 
-    x := l
+        std::unique_lock<std::mutex> lk(m);
 
-    for {
-
-        if x == nil {
-            break
-        }
-
-        temp = append(temp, x.Val)
-
-        x = x.Next
-    }
-
-    // https://stackoverflow.com/questions/19239449/how-do-i-reverse-an-array-in-go
-    for i, j := 0, len(temp)-1; i < j; i, j = i+1, j-1 {
-        temp[i], temp[j] = temp[j], temp[i]
-    }
-
-    var newl = &ListNode{0, nil}
-
-    var start = newl
-
-    for i, e := range temp {
-        newl.Val = e
-        if i != len(temp)-1 {
-            newl.Next = &ListNode{0, nil}
-            newl = newl.Next
-        }
-    }
-
-    return start
-}
-*/
-
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-
-    if (l1 == nil) || (l2 == nil) {
-        return nil
-    }
-
-    x1 := l1
-    x2 := l2
-
-    var newL = &ListNode{0, nil}
-
-    var start = newL
-
-    flag1 := true
-    flag2 := true
-
-    extra := 0
-
-    for {
-
-        newVal := extra
-
-        if flag1 {
-            newVal += x1.Val
-        }
-
-        if flag2 {
-            newVal += x2.Val
-        }
-
-        extra = 0
-
-        if newVal > 9 {
-            extra = 1
-            newVal -= 10
-        }
-
-        newL.Val = newVal
-
-        if flag1 {
-            x1 = x1.Next
-            flag1 = x1 != nil
-        }
-
-        if flag2 {
-            x2 = x2.Next
-            flag2 = x2 != nil
-        }
-
-        if flag1 || flag2 || (extra > 0) {
-            newL.Next = &ListNode{0, nil}
-            newL = newL.Next
+        if (flag == 1) { 
+           std::cout << "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
         } else {
-            break
-        }
-    }
+           cv.wait(lk, []{return flag == 1;});
+        }   
 
-    return start
-
+        if (i > n) return;
+   }
 }
 
-func ListCreate(a []int) *ListNode {
+void task2(const int n)
+{
+    int i = 1;
 
-    var l = &ListNode{0, nil}
+    for(;;) {
 
-    var start = l
+        std::unique_lock<std::mutex> lk(m);
 
-    for i, s := range a {
+        if (flag == 2) { 
+           std::cout << "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
 
-        l.Val = s
-        if i != len(a)-1 {
-            l.Next = &ListNode{0, nil}
-            l = l.Next
-        }
-    }
-
-    return start
+        if (i > n) return;
+   }
 }
 
-func printList(l *ListNode) {
+int main()
+{
+    flag = 1;
 
-    x := l
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
 
-    for {
-
-        if x == nil {
-            break
-        }
-
-        fmt.Print(x.Val, " ")
-
-        x = x.Next
-    }
-
-    fmt.Println()
-
-}
-
-func main() {
-
-    a := []int{2, 4, 3}
-    b := []int{5, 6, 4}
-
-    l1 := ListCreate(a)
-    l2 := ListCreate(b)
-
-    printList(l1)
-    printList(l2)
-
-    printList(addTwoNumbers(l1, l2))
-
-    // 7 0 8
+    t1.join();
+    t2.join();
 }
 
                 
@@ -549,7 +486,7 @@ func main() {
     <script>
 
     $(function() {
-        $("body").mark("val");
+        $("body").mark("All");
     });
 
     </script>    

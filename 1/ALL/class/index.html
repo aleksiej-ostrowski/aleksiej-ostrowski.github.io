@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aleksiej Ostrowski. Personal webpage">
  
-    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-3.css">
+    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-6.css">
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=4.css">
 
     <link rel="stylesheet"  href="../../../static/highlight/default.min.css">
@@ -92,6 +92,27 @@
 		    <div class="container">
 
                  
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/BOCxyBPDjzNF/index.html">Wyuczona bezradność</a></h3>
+            <div class="meta mb-1"><span><a href="../../esej/index.html">esej</a></span><span><a href="../../polski/index.html">polski</a></span></div>
+            
+            <p class="mb-2">
+            
+                Co to jest? Czy dorośli mogą świadomie zrezygnować ze swoich możliwości z tego powodu, że tak im będzie lepiej w życiu? Tutaj trzeba koniecznie ustalić dokładnie, jakie są te oczekiwania. Co to w ogóle oznacza "lepiej w życiu"? Czy może na przykład <u>hikikomori</u> to właściwie typowa wyuczona bezradność?
+Niestety, jak to odbywa się retoryczne w dyskursie, nie można stanowczo odpowiadać na te pytania. 
+Bo to są pytania jak najbardziej filozoficzne. Odpowiedz na te pytania całkowicie zależy od tego, kto pyta, kto jest świadkiem procesu komunikatywnego. Hikikomori ("wycofany") jako ofiara tego procesu może nie dawać sobie sprawy co się dzieje; jak świat toczy się wokół niego. A może to przykład optymalizacji życia społecznego, kiedy członkowie społeczności podświadomie rezygnują z socjalnej aktywności, w celu oszczędzania energii społecznej czy psychicznej? Mam na myśli optymalizację bardziej w stylu psychofizycznym, kiedy energia takiego rodzaju zostaje uwolniona dla przetrwania jakiegoś kryzysu. Na przykład kryzysu przeludnienia.
+
+            </p>   
+                
+           
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+ 
 
 <div class="item mb-5">
     <div class="media">
@@ -434,110 +455,6 @@ func main () {
                
 
                </code>
-                </pre>
-                
-                
-            </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
-
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
-            <div class="meta mb-1"><span><a href="../../cpp/index.html">cpp</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-                <pre>                       
-                <code class="cpp">
-                
-/*
-
-#----------------------------------------------------------------------#
-#                                                                      #
-#  version 0.0.1                                                       #
-#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
-#                                                                      #
-#  Aleksiej Ostrowski, 2020                                            #
-#                                                                      #
-#  https://aleksiej.com                                                #
-#                                                                      #
-#----------------------------------------------------------------------#  
-
-*/
-
-
-#include &lt;iostream&gt;
-#include &lt;thread&gt;
-#include &lt;mutex&gt;
-#include &lt;condition_variable&gt;
-
-std::mutex m;
-std::condition_variable cv;
-
-int flag = 1;
-
-void task1(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock<std::mutex> lk(m);
-
-        if (flag == 1) { 
-           std::cout << "foo";
-           i++;
-           flag = 2;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 1;});
-        }   
-
-        if (i > n) return;
-   }
-}
-
-void task2(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock<std::mutex> lk(m);
-
-        if (flag == 2) { 
-           std::cout << "boo";
-           i++;
-           flag = 1;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 2;});
-        }   
-
-        if (i > n) return;
-   }
-}
-
-int main()
-{
-    flag = 1;
-
-    std::thread t1(task1, 3);
-    std::thread t2(task2, 3);
-
-    t1.join();
-    t2.join();
-}
-
-                
-                </code>
                 </pre>
                 
                 
