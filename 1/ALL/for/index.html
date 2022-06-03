@@ -92,6 +92,23 @@
 		    <div class="container">
 
                  
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/1zS7C836bXMZ/index.html">Warum ist Schach derzeit kein sehr gutes Spiel?</a></h3>
+            <div class="meta mb-1"><span><a href="../../deutsch/index.html">deutsch</a></span><span><a href="../../esej/index.html">esej</a></span><span><a href="../../schach/index.html">schach</a></span></div>
+            
+            <p class="mb-2">
+            
+Schach ist eines der mächtigsten intellektuellen Spiele, die der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all die Jahre war Schach in einer sehr starken Position. Aber seit 30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle Kämpfe, aber warum? Ich denke, dass diese Situation mit der Entwicklung der Informatik korreliert. Computer und Algorithmen werden so schnell und effizient, dass Schach gehackt werden kann. Deshalb spielen die Leute nicht mehr so ​​gerne Schach wie früher. Der Computer kann jederzeit im Spiel helfen. Das Schlimmste ist, dass der Computer einen Menschen im Denken befreit. Hier kann man sich streiten. Allerdings, der Computer kann jedoch gute Ergebnisse erzielen. Zu wissen, dass der Computer effizient ist, verdirbt den Spaß am Spiel. Der Computer nicht zu benutzen, macht einen Menschen nicht frei. Denn auf diese Weise betrügt sich der Mensch und erlaubt sich nicht, die volle Kraft dessen zu nutzen, was überhaupt existiert. Ich denke, dass professionelle Schachspieler in der aktuellen Situation die volle Leistungsfähigkeit von Computerberatungssystemen ohne Einschränkungen nutzen sollten. So wird die Situation fair. Aber es verdirbt auch den Spaß am Spiel.
+
+            </p>   
+                
+           
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item--> 
 
 <div class="item mb-5">
     <div class="media">
@@ -502,148 +519,6 @@ int main()
     t2.join();
 }
 
-                
-                </code>
-                </pre>
-                
-                
-            </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
-
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/GsU9welgyh4q/index.html">Median of Two Sorted Arrays</a></h3>
-            <div class="meta mb-1"><span><a href="../../golang/index.html">golang</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-                <pre>                       
-                <code class="go">
-                
-/*
-
-#-------------------------------------------------------------#
-#                                                             #
-#  version 0.0.1                                              #
-#  https://leetcode.com/problems/median-of-two-sorted-arrays/ #
-#                                                             #
-#  Aleksiej Ostrowski, 2020                                   #
-#                                                             #
-#  https://aleksiej.com                                       #
-#                                                             #
-#-------------------------------------------------------------#  
-
-*/
-
-package main
-
-import (
-    "fmt"
-)
-
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-
-    i1 := 0
-    i2 := 0
-
-    var x1 []int
-    var x2 []int
-
-    x1 = nums1
-    x2 = nums2
-
-    switch {
-    case (len(nums1) == 0) && (len(nums2) > 0):
-         x1 = nums2
-         x2 = nums1
-    case (len(nums1) > 0) && (len(nums2) > 0):
-        if nums1[i1] > nums2[i2] {
-            x1 = nums2
-            x2 = nums1
-        }
-    }
-
-    r := make([]int, len(x1) + len(x2))
-
-    ir := 0
-
-    for {
-
-        if i1 >= len(x1) {
-            break
-        }
-
-        e1 := x1[i1]
-
-        r[ir] = e1
-
-        ir += 1
-
-        e3 := e1
-
-        flag := true
-
-        if i1 + 1 < len(x1) {
-            e3 = x1[i1 + 1]
-            flag = false
-        }
-
-        for {
-
-            if i2 >= len(x2) {
-                break
-            }
-
-            e2 := x2[i2]
-            if (e2 >= e1) && ( (e2 <= e3) || flag) {
-                r[ir] = e2
-                ir += 1
-                i2 += 1
-            } else {
-                break;
-            }
-        }
-
-        i1 += 1
-    }
-
-    ifz := len(r) % 2 == 0
-
-    fmt.Println(r)
-
-    ind := len(r) / 2
-
-    fmt.Println("ind = ", ind, "el = ", r[ind])
-    
-    if ifz {
-        return (float64(r[ind - 1]) + float64(r[ind])) * 0.5
-    } else {
-        return float64(r[ind])
-    }
-
-}
-
-
-func main() {
-
-    a := []int{1,34,56,100,200, 201, 500}
-    b := []int{250}
-
-    // a := []int{1,2,3,4,5}
-    // b := []int{}
-
-    fmt.Println("a = ", a)
-    fmt.Println("b = ", b)
-
-    fmt.Println(findMedianSortedArrays(a, b))
-
-}
-                
                 
                 </code>
                 </pre>
