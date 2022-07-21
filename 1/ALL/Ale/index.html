@@ -135,7 +135,397 @@ Bo to są pytania jak najbardziej filozoficzne. Odpowiedz na te pytania całkowi
     <hr/> 
 </div><!--//item-->
 
-<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav>
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/RunNXdvTOAy1/index.html">Longest Substring Without Repeating Characters</a></h3>
+            <div class="meta mb-1"><span><a href="../../cpp/index.html">cpp</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
+            
+            <div class="intro">
+            
+                
+                <pre>                       
+                <code>
+                
+/*
+#----------------------------------------------------------------------------------------------#
+#                                                                                              #
+#  version 0.0.1                                                                               #
+*  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
+#                                                                                              #
+#  Aleksiej Ostrowski, 2020                                                                    #
+#                                                                                              #
+#  https://aleksiej.com                                                                        #
+#                                                                                              #
+#----------------------------------------------------------------------------------------------#  
+*/
+
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+
+int max(const int a, const int b) {
+    if (a > b) return a; else return b;
+}
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+
+        auto len_s = s.length();
+
+        if (len_s <= 1) return len_s;
+
+        std::string t;
+
+        int max_len = -1;
+
+        int i = 0;
+        
+        for (;;) {
+            
+           auto found = t.find(s[i]);
+
+           if (found != -1) t = t.substr(found + 1);
+
+           t += s[i];
+
+           max_len = max(max_len, t.length());
+
+           std::cout << "i = " << i <<  " s[" << i << "] = " << s[i] << " max_len = " << max_len << " string = " << t << std::endl;
+          
+           if (++i >= len_s) break;
+        }        
+        
+        return max_len;
+    
+    }
+};
+
+int main() {
+
+    // std::string s = "aabac"; // 3
+    // std::string s = "pwwkew"; // 3
+    // std::string s = "bbbbb"; // 1
+    // std::string s = " "; // 1
+    std::string s = "aab"; // 2
+
+    std::cout << "input " << s << std::endl;
+    auto S = Solution();
+    std::cout << S.lengthOfLongestSubstring(s) << std::endl;  
+
+    return 0;
+}
+
+                
+                </code>
+                </pre>
+                
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/MAPRXp7WNbyH/index.html">Fancy Sequence</a></h3>
+            <div class="meta mb-1"><span><a href="../../golang/index.html">golang</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
+            
+            <div class="intro">
+            
+            <br/> <img src="../../../static/images/fancy.png" alt="" class="img-thumbnail">
+            
+                <pre>                       
+                <code class="go">
+ 
+ /*
+
+#-------------------------------------------------------------#
+#                                                             #
+#  version 0.0.2                                              #
+#  https://leetcode.com/problems/fancy-sequence/              #
+#                                                             #
+#  Aleksiej Ostrowski, 2021                                   #
+#                                                             #
+#  https://aleksiej.com                                       #
+#                                                             #
+#-------------------------------------------------------------#   
+
+*/
+
+package main
+
+import (
+    "fmt"
+    "os"
+)
+
+const crt = 84467440737095516 // max(uint64) = 8446744073709551615
+const md  = 1000000007
+
+type Oper struct {
+    o int8
+    v int8
+    h int32
+}
+
+type Fancy struct {
+    arr []int8
+    opr []Oper
+    cas map[int]int
+}
+
+func Constructor() Fancy {
+    return Fancy{}
+}
+
+func (this *Fancy) Append(val int)  {
+    this.arr = append(this.arr, int8(val))
+}
+
+
+func printList(l Fancy) {
+
+    for _, v := range l.arr {
+
+        fmt.Print(v, " ")
+    }
+
+    fmt.Println()
+}
+
+func (this *Fancy) AddAll(inc int)  {
+
+    this.opr = append(this.opr, Oper{-2, int8(inc), int32(len(this.arr))})
+    this.cas = make(map[int]int)
+
+    /*
+
+    for k := range this.cas {
+        delete(this.cas, k)
+    }
+
+    */
+}
+
+func (this *Fancy) MultAll(m int)  {
+
+    this.opr = append(this.opr, Oper{-1, int8(m), int32(len(this.arr))})
+    this.cas = make(map[int]int)
+
+    /*
+
+    for k := range this.cas {
+        delete(this.cas, k)
+    }
+
+    */
+}
+
+
+func (this *Fancy) GetIndex(idx int) int {
+
+    if idx < 0 || idx >= len(this.arr) {
+        return -1
+    }
+
+    if val, ok := this.cas[idx]; ok {
+        return val
+    }
+
+    var vv uint64
+
+    vv = uint64(this.arr[idx])
+    
+    for _, v := range this.opr {
+
+        if idx >= int(v.h) {
+            continue
+        }
+
+        switch os := v.o; os {
+        case -2:
+            vv += uint64(v.v)
+        case -1:
+            vv *= uint64(v.v)
+        }
+
+         if vv > crt {
+            vv = vv % md
+        }    
+    }
+
+    if vv > md {
+        vv = vv % md
+    }    
+
+    if this.cas == nil {
+        this.cas = make(map[int]int)
+    }
+
+    this.cas[idx] = int(vv)
+    
+    return int(vv)
+}
+
+func main () {
+
+    obj := Constructor()
+
+    obj.Append(2)
+    obj.Append(4)
+    obj.Append(1)
+    obj.Append(6)
+
+    printList(obj)
+
+    obj.AddAll(9)
+    obj.AddAll(1)
+    obj.MultAll(2)
+
+    fmt.Println(obj.GetIndex(0))
+
+    os.Exit(1)
+
+    obj.MultAll(9)
+    obj.AddAll(2)
+    fmt.Println(obj.GetIndex(3))
+    obj.Append(7)
+    obj.Append(5)
+    obj.Append(3)
+    obj.AddAll(4)
+    obj.MultAll(5)
+    obj.AddAll(4)
+    fmt.Println(obj.GetIndex(1))
+}
+               
+
+               </code>
+                </pre>
+                
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
+            <div class="meta mb-1"><span><a href="../../cpp/index.html">cpp</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
+            
+            <div class="intro">
+            
+                <pre>                       
+                <code class="cpp">
+                
+/*
+
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
+
+*/
+
+
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::mutex m;
+std::condition_variable cv;
+
+int flag = 1;
+
+void task1(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock<std::mutex> lk(m);
+
+        if (flag == 1) { 
+           std::cout << "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 1;});
+        }   
+
+        if (i > n) return;
+   }
+}
+
+void task2(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock<std::mutex> lk(m);
+
+        if (flag == 2) { 
+           std::cout << "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
+
+        if (i > n) return;
+   }
+}
+
+int main()
+{
+    flag = 1;
+
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
+
+    t1.join();
+    t2.join();
+}
+
+                
+                </code>
+                </pre>
+                
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li><li class="page-item"><a class="page-link" href="../../../2/ALL/Ale/index.html">2</a></li> 
+           <li class="page-item">
+              <a class="page-link" href="../../../2/ALL/Ale/index.html">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+     </ul></nav>
 
 		    </div>
 	    </section>
@@ -167,7 +557,7 @@ Bo to są pytania jak najbardziej filozoficzne. Odpowiedz na te pytania całkowi
     <script>
 
     $(function() {
-        $("body").mark("nie");
+        $("body").mark("Ale");
     });
 
     </script>    
