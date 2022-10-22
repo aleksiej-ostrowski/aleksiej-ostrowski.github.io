@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aleksiej Ostrowski. Personal webpage">
  
-    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-4.css">
+    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-7.css">
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=4.css">
 
     <link rel="stylesheet"  href="../../../static/highlight/default.min.css">
@@ -99,6 +99,105 @@
 		    <div class="container">
 
                  
+
+<div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/8MfEq38UOg5e/index.html">Roman to Integer</a></h3>
+            <div class="meta mb-1"><span><a href="../../leetcode/index.html">leetcode</a></span><span><a href="../../typescript/index.html">typescript</a></span></div>
+            
+            <div class="intro">
+            
+                <br/> <img src="../../../static/images/13roman.png" alt="" class="img-thumbnail">
+                
+                <pre>                       
+                <code>
+                
+/*
+#--------------------------------------------------#
+#                                                  #
+#  version 0.0.1                                   #
+#  https://leetcode.com/problems/roman-to-integer  #
+#                                                  #
+#  Aleksiej Ostrowski, 2022                        #
+#                                                  #
+#  https://aleksiej.com                            #
+#                                                  #
+#--------------------------------------------------#  
+*/
+
+function romanToInt(s: string): number {
+  if (s.length == 0) {
+    return 0;
+  }
+
+  let res = 0;
+  let old_level = 1;
+  let max_level = -1;
+
+  //for (const el of s.split("").reverse()) {
+  for (let i = s.length - 1; i >= 0; i--) {
+    // console.log(el)
+    switch (s[i]) {
+      case "I": {
+        res = max_level > 1 ? res - 1 : res + 1;
+        old_level = 1;
+        break;
+      }
+      case "V": {
+        res = max_level > 2 ? res - 5 : res + 5;
+        old_level = 2;
+        break;
+      }
+      case "X": {
+        res = max_level > 3 ? res - 10 : res + 10;
+        old_level = 3;
+        break;
+      }
+      case "L": {
+        res = max_level > 4 ? res - 50 : res + 50;
+        old_level = 4;
+        break;
+      }
+
+      case "C": {
+        res = max_level > 5 ? res - 100 : res + 100;
+        old_level = 5;
+        break;
+      }
+
+      case "D": {
+        res = max_level > 6 ? res - 500 : res + 500;
+        old_level = 6;
+        break;
+      }
+
+      case "M": {
+        res += 1000;
+        old_level = 7;
+        break;
+      }
+    }
+
+    max_level = Math.max(max_level, old_level);
+  }
+  return res;
+}
+
+console.log(romanToInt("MCMXCIV"));
+                
+                </code>
+                </pre>
+               
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+ 
 
 <div class="item mb-5">
     <div class="media">
@@ -475,110 +574,6 @@ func main () {
     <hr/> 
 </div><!--//item-->
 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
-            <div class="meta mb-1"><span><a href="../../cpp/index.html">cpp</a></span><span><a href="../../leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-                <pre>                       
-                <code class="cpp">
-                
-/*
-
-#----------------------------------------------------------------------#
-#                                                                      #
-#  version 0.0.1                                                       #
-#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
-#                                                                      #
-#  Aleksiej Ostrowski, 2020                                            #
-#                                                                      #
-#  https://aleksiej.com                                                #
-#                                                                      #
-#----------------------------------------------------------------------#  
-
-*/
-
-
-#include &lt;iostream&gt;
-#include &lt;thread&gt;
-#include &lt;mutex&gt;
-#include &lt;condition_variable&gt;
-
-std::mutex m;
-std::condition_variable cv;
-
-int flag = 1;
-
-void task1(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock<std::mutex> lk(m);
-
-        if (flag == 1) { 
-           std::cout << "foo";
-           i++;
-           flag = 2;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 1;});
-        }   
-
-        if (i > n) return;
-   }
-}
-
-void task2(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock<std::mutex> lk(m);
-
-        if (flag == 2) { 
-           std::cout << "boo";
-           i++;
-           flag = 1;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 2;});
-        }   
-
-        if (i > n) return;
-   }
-}
-
-int main()
-{
-    flag = 1;
-
-    std::thread t1(task1, 3);
-    std::thread t2(task2, 3);
-
-    t1.join();
-    t2.join();
-}
-
-                
-                </code>
-                </pre>
-                
-                
-            </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
-
 <nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li><li class="page-item"><a class="page-link" href="../../../2/ALL/problem/index.html">2</a></li> 
            <li class="page-item">
               <a class="page-link" href="../../../2/ALL/problem/index.html">
@@ -605,8 +600,10 @@ int main()
     <script src="../../../static/blog/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script src="../../../static/js/blog.js%3Fv=4"></script> 
 
-    <script src="../../../static/highlight/highlight.min.js"></script>
-    <!-- <script charset="UTF-8" src="static/highlight/cpp.min.js"></script> -->
+    <script src="../../../static/highlight/highlight.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/cpp.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/go.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/typescript.min.js%3Fv=0"></script>
     <script src="../../../static/js/jquery.mark.min.js"></script>
 
     <!-- FontAwesome JS-->

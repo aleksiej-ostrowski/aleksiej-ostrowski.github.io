@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aleksiej Ostrowski. Personal webpage">
  
-    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-4.css">
+    <link id="theme-style" rel="stylesheet" href="../../../static/blog/assets/css/theme-7.css">
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=4.css">
 
     <link rel="stylesheet"  href="../../../static/highlight/default.min.css">
@@ -99,6 +99,110 @@
 		    <div class="container">
 
                 <div class="item mb-5">
+    <div class="media">
+        <div class="media-body">
+            <h3 class="title mb-1"><a href="../../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
+            <div class="meta mb-1"><span><a href="../../../1/cpp/index.html">cpp</a></span><span><a href="../../../1/leetcode/index.html">leetcode</a></span></div>
+            
+            <div class="intro">
+            
+                <pre>                       
+                <code class="cpp">
+                
+/*
+
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
+
+*/
+
+
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::mutex m;
+std::condition_variable cv;
+
+int flag = 1;
+
+void task1(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock<std::mutex> lk(m);
+
+        if (flag == 1) { 
+           std::cout << "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 1;});
+        }   
+
+        if (i > n) return;
+   }
+}
+
+void task2(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock<std::mutex> lk(m);
+
+        if (flag == 2) { 
+           std::cout << "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
+
+        if (i > n) return;
+   }
+}
+
+int main()
+{
+    flag = 1;
+
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
+
+    t1.join();
+    t2.join();
+}
+
+                
+                </code>
+                </pre>
+                
+                
+            </div>
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+    <hr/> 
+</div><!--//item-->
+
+<div class="item mb-5">
     <div class="media">
         <div class="media-body">
             <h3 class="title mb-1"><a href="../../../id/GsU9welgyh4q/index.html">Median of Two Sorted Arrays</a></h3>
@@ -545,8 +649,10 @@ func main() {
     <script src="../../../static/blog/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script src="../../../static/js/blog.js%3Fv=4"></script> 
 
-    <script src="../../../static/highlight/highlight.min.js"></script>
-    <!-- <script charset="UTF-8" src="static/highlight/cpp.min.js"></script> -->
+    <script src="../../../static/highlight/highlight.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/cpp.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/go.min.js%3Fv=0"></script>
+    <script charset="UTF-8" src="../../../static/highlight/typescript.min.js%3Fv=0"></script>
     <script src="../../../static/js/jquery.mark.min.js"></script>
 
     <!-- FontAwesome JS-->
