@@ -12,16 +12,16 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-7.css"
+      href="../../../static/blog/assets/css/theme-7.css%3Fv=2.css"
     />
     <link
       rel="stylesheet"
-      href="../../../static/css/blog.css%3Fv=4.css"
+      href="../../../static/css/blog.css%3Fv=2.css"
     />
 
     <link
       rel="stylesheet"
-      href="../../../static/highlight/default.min.css"
+      href="../../../static/highlight/default.min.css%3Fv=2.css"
     />
 
     <link
@@ -237,31 +237,27 @@
     <!--//main-wrapper-->
 
     <!-- Javascript -->
-    <script src="../../../static/blog/assets/plugins/jquery-3.4.1.min.js"></script>
-    <script src="../../../static/blog/assets/plugins/popper.min.js"></script>
-    <script src="../../../static/blog/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../../static/js/blog.js"></script>
+    <!-- <script src="http://127.0.0.1:9000/static/js/jquery.min.js?v=2"></script> -->
+    <script src="../../../static/js/popper.min.js%3Fv=2"></script>
+    <script src="../../../static/js/bootstrap.min.js%3Fv=2"></script>
+    <script src="../../../static/js/blog.js%3Fv=2"></script>
+    <script src="../../../static/js/mark.js%3Fv=2"></script>
 
-    <script src="../../../static/highlight/highlight.min.js%3Fv=1"></script>
-    <script src="../../../static/highlight/cpp.min.js%3Fv=1"></script>
-    <script src="../../../static/highlight/go.min.js%3Fv=1"></script>
-    <script src="../../../static/highlight/typescript.min.js%3Fv=1"></script>
-    <script src="../../../static/js/jquery.mark.min.js"></script>
+    <script src="../../../static/highlight/highlight.min.js%3Fv=3"></script>
+    <script src="../../../static/highlight/cpp.min.js%3Fv=2"></script>
+    <script src="../../../static/highlight/go.min.js%3Fv=2"></script>
+    <script src="../../../static/highlight/typescript.min.js%3Fv=2"></script>
 
     <!-- FontAwesome JS-->
-    <script
-      defer
-      src="../../../static/blog/assets/fontawesome/js/all.min.js"
-    ></script>
+    <script defer src="../../../static/js/all.min.js%3Fv=2"></script>
 
     <script>
-      hljs.initHighlightingOnLoad();
+      hljs.highlightAll();
     </script>
 
     <script>
-      $(function () {
-        $("body").mark("spricht");
-      });
+      var markInstance = new Mark(document.querySelector("body"));
+      markInstance.mark("spricht");
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
