@@ -12,12 +12,9 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="../../static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="../../static/css/blog.css%3Fv=2.css" />
 
     <link
       rel="stylesheet"
@@ -46,14 +43,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +60,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +102,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="../../resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../../blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../../static/gallery/page1.html"
-              >
+              <a class="nav-link" href="../../static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +133,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +153,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="../../cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="../../cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="../../words/index.html">All words</a>
           </div>
 
@@ -173,110 +170,23 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container"><div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../id/RunNXdvTOAy1/index.html">Longest Substring Without Repeating Characters</a></h3>
-            <div class="meta mb-1"><span><a href="index.html">cpp</a></span><span><a href="../leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-                
-                <pre>                       
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../id/VJnwp61rwxZk/index.html"
+                    >Print FooBar Alternately</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="index.html">cpp</a></span
+                  ><span><a href="../leetcode/index.html">leetcode</a></span>
+                </div>
+
+                <div class="intro">
+                  <pre>                       
                 <code>
-                
-/*
-#----------------------------------------------------------------------------------------------#
-#                                                                                              #
-#  version 0.0.1                                                                               #
-*  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
-#                                                                                              #
-#  Aleksiej Ostrowski, 2020                                                                    #
-#                                                                                              #
-#  https://aleksiej.com                                                                        #
-#                                                                                              #
-#----------------------------------------------------------------------------------------------#  
-*/
-
-#include &lt;string&gt;
-#include &lt;iostream&gt;
-
-
-int max(const int a, const int b) {
-    if (a > b) return a; else return b;
-}
-
-class Solution {
-public:
-    int lengthOfLongestSubstring(std::string s) {
-
-        auto len_s = s.length();
-
-        if (len_s <= 1) return len_s;
-
-        std::string t;
-
-        int max_len = -1;
-
-        int i = 0;
-        
-        for (;;) {
-            
-           auto found = t.find(s[i]);
-
-           if (found != -1) t = t.substr(found + 1);
-
-           t += s[i];
-
-           max_len = max(max_len, t.length());
-
-           std::cout << "i = " << i <<  " s[" << i << "] = " << s[i] << " max_len = " << max_len << " string = " << t << std::endl;
-          
-           if (++i >= len_s) break;
-        }        
-        
-        return max_len;
-    
-    }
-};
-
-int main() {
-
-    // std::string s = "aabac"; // 3
-    // std::string s = "pwwkew"; // 3
-    // std::string s = "bbbbb"; // 1
-    // std::string s = " "; // 1
-    std::string s = "aab"; // 2
-
-    std::cout << "input " << s << std::endl;
-    auto S = Solution();
-    std::cout << S.lengthOfLongestSubstring(s) << std::endl;  
-
-    return 0;
-}
-
-                
-                </code>
-                </pre>
-                
-                
-            </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
-
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../id/VJnwp61rwxZk/index.html">Print FooBar Alternately</a></h3>
-            <div class="meta mb-1"><span><a href="index.html">cpp</a></span><span><a href="../leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-                <pre>                       
-                <code class="cpp">
                 
 /*
 
@@ -310,10 +220,10 @@ void task1(const int n)
 
     for(;;) {
 
-        std::unique_lock<std::mutex> lk(m);
+        std::unique_lock&lt;std::mutex&gt; lk(m);
 
         if (flag == 1) { 
-           std::cout << "foo";
+           std::cout &lt;&lt; "foo";
            i++;
            flag = 2;
            lk.unlock();
@@ -322,7 +232,7 @@ void task1(const int n)
            cv.wait(lk, []{return flag == 1;});
         }   
 
-        if (i > n) return;
+        if (i &gt; n) return;
    }
 }
 
@@ -332,10 +242,10 @@ void task2(const int n)
 
     for(;;) {
 
-        std::unique_lock<std::mutex> lk(m);
+        std::unique_lock&lt;std::mutex&gt; lk(m);
 
         if (flag == 2) { 
-           std::cout << "boo";
+           std::cout &lt;&lt; "boo";
            i++;
            flag = 1;
            lk.unlock();
@@ -344,7 +254,7 @@ void task2(const int n)
            cv.wait(lk, []{return flag == 2;});
         }   
 
-        if (i > n) return;
+        if (i &gt; n) return;
    }
 }
 
@@ -362,16 +272,122 @@ int main()
                 
                 </code>
                 </pre>
-                
-                
+                </div>
+              </div>
+              <!--//media-body-->
             </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
-<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav></div>
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../id/RunNXdvTOAy1/index.html"
+                    >Longest Substring Without Repeating Characters</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="index.html">cpp</a></span
+                  ><span><a href="../leetcode/index.html">leetcode</a></span>
+                </div>
+
+                <div class="intro">
+                  <pre>                       
+                <code>
+                
+/*
+#----------------------------------------------------------------------------------------------#
+#                                                                                              #
+#  version 0.0.1                                                                               #
+#  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
+#                                                                                              #
+#  Aleksiej Ostrowski, 2020                                                                    #
+#                                                                                              #
+#  https://aleksiej.com                                                                        #
+#                                                                                              #
+#----------------------------------------------------------------------------------------------#  
+*/
+
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+
+int max(const int a, const int b) {
+    if (a &gt; b) return a; else return b;
+}
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+
+        auto len_s = s.length();
+
+        if (len_s &lt;= 1) return len_s;
+
+        std::string t;
+
+        int max_len = -1;
+
+        int i = 0;
+        
+        for (;;) {
+            
+           auto found = t.find(s[i]);
+
+           if (found != -1) t = t.substr(found + 1);
+
+           t += s[i];
+
+           max_len = max(max_len, t.length());
+
+           std::cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt;  " s[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; s[i] &lt;&lt; " max_len = " &lt;&lt; max_len &lt;&lt; " string = " &lt;&lt; t &lt;&lt; std::endl;
+          
+           if (++i &gt;= len_s) break;
+        }        
+        
+        return max_len;
+    
+    }
+};
+
+int main() {
+
+    // std::string s = "aabac"; // 3
+    // std::string s = "pwwkew"; // 3
+    // std::string s = "bbbbb"; // 1
+    // std::string s = " "; // 1
+    std::string s = "aab"; // 2
+
+    std::cout &lt;&lt; "input " &lt;&lt; s &lt;&lt; std::endl;
+    auto S = Solution();
+    std::cout &lt;&lt; S.lengthOfLongestSubstring(s) &lt;&lt; std::endl;  
+
+    return 0;
+}
+
+                
+                </code>
+                </pre>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">

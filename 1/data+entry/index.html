@@ -12,12 +12,9 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="../../static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="../../static/css/blog.css%3Fv=2.css" />
 
     <link
       rel="stylesheet"
@@ -46,14 +43,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +60,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +102,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="../../resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../../blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../../static/gallery/page1.html"
-              >
+              <a class="nav-link" href="../../static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +133,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +153,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="../../cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="../../cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="../../words/index.html">All words</a>
           </div>
 
@@ -173,41 +170,63 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container">			    <div class="item mb-5">
-				    <div class="media">
-					    <div class="media-body">
-						    <h3 class="title mb-1"><a href="../../id/86FBlaC2mtHN/index.html">How to use the program Data Entry</a></h3>
-							<div class="meta mb-1">
-                                <span><a href="index.html">data entry</a></span><span><a href="../spss/index.html">spss</a></span> 
-							</div>
-							
-						    
-						    <div class="intro">
-						    
-						    <h6 class="my-3">This video demonstrates the basic capabilities of the Data Entry program.</h6>
-						    
-<ol class="mb-5">
-					  <li class="mb-2">Creating interval numeric and other variables.</li>
-					  <li class="mb-2">The verifiable entry of variable values.</li>
-					  <li class="mb-2">Exporting to SPSS. Save the template with a password.</li>
-					</ol>
-					
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../id/86FBlaC2mtHN/index.html"
+                    >How to use the program Data Entry</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="index.html">data entry</a></span
+                  ><span><a href="../spss/index.html">spss</a></span>
+                </div>
 
-<div class="embed-responsive embed-responsive-16by9"> 
- <iframe width="1280" height="960" src="https://www.youtube.com/embed/An60lB-EJQc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-</div>					    
-						    
-							
-							
-							
-							</div>
-							
-					    </div><!--//media-body-->
-					</div><!--//media-->
-                    <hr/> 
-				</div><!--//item-->
+                <div class="intro">
+                  <h6 class="my-3">
+                    This video demonstrates the basic capabilities of the Data
+                    Entry program.
+                  </h6>
 
-<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav></div>
+                  <ol class="mb-5">
+                    <li class="mb-2">
+                      Creating interval numeric and other variables.
+                    </li>
+                    <li class="mb-2">
+                      The verifiable entry of variable values.
+                    </li>
+                    <li class="mb-2">
+                      Exporting to SPSS. Save the template with a password.
+                    </li>
+                  </ol>
+
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/An60lB-EJQc"
+                      frameborder="0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">

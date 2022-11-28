@@ -12,12 +12,9 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="../../../static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
     <link
       rel="stylesheet"
@@ -46,14 +43,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +60,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +102,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="../../../resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="../../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../../../blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="../../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../../../static/gallery/page1.html"
-              >
+              <a class="nav-link" href="../../../static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +133,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +153,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="../../../cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="../../../cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="../../../words/index.html">All words</a>
           </div>
 
@@ -173,88 +170,133 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container"> 
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/Y81hhPehxRf6/index.html"
+                    >Little Linux experimentation with laptop AN515-46-R70A</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../english/index.html">english</a></span
+                  ><span><a href="../../esej/index.html">esej</a></span
+                  ><span><a href="../../laptop/index.html">laptop</a></span>
+                </div>
 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/Y81hhPehxRf6/index.html">Little Linux experimentation with laptop AN515-46-R70A</a></h3>
-            <div class="meta mb-1"><span><a href="../../english/index.html">english</a></span><span><a href="../../esej/index.html">esej</a></span><span><a href="../../laptop/index.html">laptop</a></span></div>
-            
-            <div class="intro">
-                            
-                I wanted to install linux on my acer laptop. But my laptop has BIOS version 1.03.
-In <a href="https://www.acer.com/ac/pl/PL/content/support-product/9334?b=1">official site</a> I saw that the latest version is 1.07. There is a Windows executable file only. Looking ahead: I tried to use <a href="https://en.wikipedia.org/wiki/Wine_(software)">wine</a> in Ubuntu to run this file. But it failed.
-Firstly, I had to install Windows. But which USB boot solution is chosen?
-On the advice of my friend, I have chosen <a href="https://github.com/ventoy/Ventoy/releases">Ventoy</a>.
-As it turned out, the BIOS firmware should reboot in DOS mode without the Windows environment.
-It was funny. After Ventoy prepared the flash card on Ubuntu, it looked as empty, but it was bootable.
-I saved the ISO Windows and Linux files for the installations to the flash drive through a simple copy operation.
-After these manipulations, I started experimenting. I downloaded the new versions of Endless OS, Linux Mint, Ubuntu and Manjaro. 
-I read that someone sells a laptop like mine with Endless OS. Therefore, I hoped to install this operating system successfully.
-But it failed. This OS is not even started. Then I successfully started Manjaro. 
-I really like this OS. This operating system is very ergonomic and functional.
-But I saw it not worked with my Wi-Fi device. I connected to LAN and did not see the problem in time.
-There are many options for choosing a Linux kernel in Manjaro. I have chosen version 6.0.0, but Wi-Fi didn't work yet.
-Linux Mint has the similar problem. Besides, the web camera didn't work either.
-I decided to stop on Ubuntu. Because, the Wi-Fi worked well.
-<br/><br/>
-<h6><center>Conclusions</center></h6>
+                <div class="intro">
+                  <div class="mb-2">
+                    I wanted to install linux on my acer laptop. But my laptop
+                    has BIOS version 1.03. In
+                    <a
+                      href="https://www.acer.com/ac/pl/PL/content/support-product/9334?b=1"
+                      >official site</a
+                    >
+                    I saw that the latest version is 1.07. There is a Windows
+                    executable file only. Looking ahead: I tried to use
+                    <a href="https://en.wikipedia.org/wiki/Wine_(software)"
+                      >wine</a
+                    >
+                    in Ubuntu to run this file. But it failed. Firstly, I had to
+                    install Windows. But which USB boot solution is chosen? On
+                    the advice of my friend, I have chosen
+                    <a href="https://github.com/ventoy/Ventoy/releases"
+                      >Ventoy</a
+                    >. As it turned out, the BIOS firmware should reboot in DOS
+                    mode without the Windows environment. It was funny. After
+                    Ventoy prepared the flash card on Ubuntu, it looked as
+                    empty, but it was bootable. I saved the ISO Windows and
+                    Linux files for the installations to the flash drive through
+                    a simple copy operation. After these manipulations, I
+                    started experimenting. I downloaded the new versions of
+                    Endless OS, Linux Mint, Ubuntu and Manjaro. I read that
+                    someone sells a laptop like mine with Endless OS. Therefore,
+                    I hoped to install this operating system successfully. But
+                    it failed. This OS is not even started. Then I successfully
+                    started Manjaro. I really like this OS. This operating
+                    system is very ergonomic and functional. But I saw it not
+                    worked with my Wi-Fi device. I connected to LAN and did not
+                    see the problem in time. There are many options for choosing
+                    a Linux kernel in Manjaro. I have chosen version 6.0.0, but
+                    Wi-Fi didn't work yet. Linux Mint has the similar problem.
+                    Besides, the web camera didn't work either. I decided to
+                    stop on Ubuntu. Because, the Wi-Fi worked well. <br /><br />
+                    <h6><center>Conclusions</center></h6>
 
-
-                <p>
-                <table class="table">
-                <thead>
-                <tr>
-                <th scope="col">Linux</th>
-                <th scope="col">Endless OS</th>
-                <th scope="col">Linux Mint</th>
-                <th scope="col">Manjaro</th>
-                <th scope="col">Ubuntu</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <th scope="row">ISO</th>
-                <td>eos-eos4.0-amd64-amd64.220406-204708.base.iso</td>
-                <td>linuxmint-21-cinnamon-64bit.iso</td>
-                <td>manjaro-kde-21.3.7-220816-linux515.iso</td>
-                <td>ubuntu-22.04.1-desktop-amd64.iso</td>
-                </tr>
-                <tr>
-                <th scope="row">Mediatek MT7921 WiFi</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#92ef73">Working</td>
-                </tr>
-                <tr>
-                <th scope="row">Internal web camera Quanta ACER HD User Facing</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                </tr>
-                <tr>
-                <th scope="row">External web camera Sunplus Innovation Aukey-PC-LM1E</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#92ef73">Working</td>
-                </tr>
-                </tbody>
-                </table>
-                </p>
-  
-                 
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Linux</th>
+                          <th scope="col">Endless OS</th>
+                          <th scope="col">Linux Mint</th>
+                          <th scope="col">Manjaro</th>
+                          <th scope="col">Ubuntu</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">ISO</th>
+                          <td>eos-eos4.0-amd64-amd64.220406-204708.base.iso</td>
+                          <td>linuxmint-21-cinnamon-64bit.iso</td>
+                          <td>manjaro-kde-21.3.7-220816-linux515.iso</td>
+                          <td>ubuntu-22.04.1-desktop-amd64.iso</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Mediatek MT7921 WiFi</th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #92ef73">Working</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            Internal web camera Quanta ACER HD User Facing
+                          </th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            External web camera Sunplus Innovation Aukey-PC-LM1E
+                          </th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #92ef73">Working</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
             </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
-<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav></div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">

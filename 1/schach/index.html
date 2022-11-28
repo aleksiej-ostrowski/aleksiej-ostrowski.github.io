@@ -12,12 +12,9 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="../../static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="../../static/css/blog.css%3Fv=2.css" />
 
     <link
       rel="stylesheet"
@@ -46,14 +43,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +60,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +102,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="../../resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../../blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../../static/gallery/page1.html"
-              >
+              <a class="nav-link" href="../../static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +133,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +153,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="../../cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="../../cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="../../words/index.html">All words</a>
           </div>
 
@@ -173,24 +170,59 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container"> 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../id/1zS7C836bXMZ/index.html">Warum ist Schach derzeit kein sehr gutes Spiel?</a></h3>
-            <div class="meta mb-1"><span><a href="../deutsch/index.html">deutsch</a></span><span><a href="../esej/index.html">esej</a></span><span><a href="index.html">schach</a></span></div>
-            
-            <p class="mb-2">
-            
-Schach ist eines der mächtigsten intellektuellen Spiele, die der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all die Jahre war Schach in einer sehr starken Position. Aber seit 30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle Kämpfe, aber warum? Ich denke, dass diese Situation mit der Entwicklung der Informatik korreliert. Computer und Algorithmen werden so schnell und effizient, dass Schach gehackt werden kann. Deshalb spielen die Leute nicht mehr so ​​gerne Schach wie früher. Der Computer kann jederzeit im Spiel helfen. Das Schlimmste ist, dass der Computer einen Menschen im Denken befreit. Hier kann man sich streiten. Allerdings, der Computer kann jedoch gute Ergebnisse erzielen. Zu wissen, dass der Computer effizient ist, verdirbt den Spaß am Spiel. Der Computer nicht zu benutzen, macht einen Menschen nicht frei. Denn auf diese Weise betrügt sich der Mensch und erlaubt sich nicht, die volle Kraft dessen zu nutzen, was überhaupt existiert. Ich denke, dass professionelle Schachspieler in der aktuellen Situation die volle Leistungsfähigkeit von Computerberatungssystemen ohne Einschränkungen nutzen sollten. So wird die Situation fair. Aber es verdirbt auch den Spaß am Spiel.
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../id/1zS7C836bXMZ/index.html"
+                    >Warum ist Schach derzeit kein sehr gutes Spiel?</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../deutsch/index.html">deutsch</a></span
+                  ><span><a href="../esej/index.html">esej</a></span
+                  ><span><a href="index.html">schach</a></span>
+                </div>
 
-            </p>   
-                
-           
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item--><nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav></div>
+                <p class="mb-2">
+                  Schach ist eines der mächtigsten intellektuellen Spiele, die
+                  der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all
+                  die Jahre war Schach in einer sehr starken Position. Aber seit
+                  30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle
+                  Kämpfe, aber warum? Ich denke, dass diese Situation mit der
+                  Entwicklung der Informatik korreliert. Computer und
+                  Algorithmen werden so schnell und effizient, dass Schach
+                  gehackt werden kann. Deshalb spielen die Leute nicht mehr so
+                  ​​gerne Schach wie früher. Der Computer kann jederzeit im
+                  Spiel helfen. Das Schlimmste ist, dass der Computer einen
+                  Menschen im Denken befreit. Hier kann man sich streiten.
+                  Allerdings, der Computer kann jedoch gute Ergebnisse erzielen.
+                  Zu wissen, dass der Computer effizient ist, verdirbt den Spaß
+                  am Spiel. Der Computer nicht zu benutzen, macht einen Menschen
+                  nicht frei. Denn auf diese Weise betrügt sich der Mensch und
+                  erlaubt sich nicht, die volle Kraft dessen zu nutzen, was
+                  überhaupt existiert. Ich denke, dass professionelle
+                  Schachspieler in der aktuellen Situation die volle
+                  Leistungsfähigkeit von Computerberatungssystemen ohne
+                  Einschränkungen nutzen sollten. So wird die Situation fair.
+                  Aber es verdirbt auch den Spaß am Spiel.
+                </p>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">

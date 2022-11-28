@@ -12,17 +12,11 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="static/css/blog.css%3Fv=2.css" />
 
-    <link
-      rel="stylesheet"
-      href="static/highlight/default.min.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="static/highlight/default.min.css%3Fv=2.css" />
 
     <link
       rel="apple-touch-icon"
@@ -46,14 +40,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +57,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +99,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="static/gallery/page1.html"
-              >
+              <a class="nav-link" href="static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +130,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +150,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="words/index.html">All words</a>
           </div>
 
@@ -173,318 +167,482 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container"> 
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="id/86FBlaC2mtHN/index.html"
+                    >How to use the program Data Entry</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="1/data+entry/index.html">data entry</a></span
+                  ><span><a href="1/spss/index.html">spss</a></span>
+                </div>
 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="id/j8vfjTPKXoVt/index.html">Longest Common Prefix</a></h3>
-            <div class="meta mb-1"><span><a href="1/golang/index.html">golang</a></span><span><a href="1/leetcode/index.html">leetcode</a></span></div>
-            
-            <div class="intro">
-            
-<br/> <img src="static/images/14longestcommonprefix.png" alt="" class="img-thumbnail">
-                
-                <pre>                       
+                <div class="intro">
+                  <h6 class="my-3">
+                    This video demonstrates the basic capabilities of the Data
+                    Entry program.
+                  </h6>
+
+                  <ol class="mb-5">
+                    <li class="mb-2">
+                      Creating interval numeric and other variables.
+                    </li>
+                    <li class="mb-2">
+                      The verifiable entry of variable values.
+                    </li>
+                    <li class="mb-2">
+                      Exporting to SPSS. Save the template with a password.
+                    </li>
+                  </ol>
+
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/An60lB-EJQc"
+                      frameborder="0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="id/Y81hhPehxRf6/index.html"
+                    >Little Linux experimentation with laptop AN515-46-R70A</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="1/english/index.html">english</a></span
+                  ><span><a href="1/esej/index.html">esej</a></span
+                  ><span><a href="1/laptop/index.html">laptop</a></span>
+                </div>
+
+                <div class="intro">
+                  <div class="mb-2">
+                    I wanted to install linux on my acer laptop. But my laptop
+                    has BIOS version 1.03. In
+                    <a
+                      href="https://www.acer.com/ac/pl/PL/content/support-product/9334?b=1"
+                      >official site</a
+                    >
+                    I saw that the latest version is 1.07. There is a Windows
+                    executable file only. Looking ahead: I tried to use
+                    <a href="https://en.wikipedia.org/wiki/Wine_(software)"
+                      >wine</a
+                    >
+                    in Ubuntu to run this file. But it failed. Firstly, I had to
+                    install Windows. But which USB boot solution is chosen? On
+                    the advice of my friend, I have chosen
+                    <a href="https://github.com/ventoy/Ventoy/releases"
+                      >Ventoy</a
+                    >. As it turned out, the BIOS firmware should reboot in DOS
+                    mode without the Windows environment. It was funny. After
+                    Ventoy prepared the flash card on Ubuntu, it looked as
+                    empty, but it was bootable. I saved the ISO Windows and
+                    Linux files for the installations to the flash drive through
+                    a simple copy operation. After these manipulations, I
+                    started experimenting. I downloaded the new versions of
+                    Endless OS, Linux Mint, Ubuntu and Manjaro. I read that
+                    someone sells a laptop like mine with Endless OS. Therefore,
+                    I hoped to install this operating system successfully. But
+                    it failed. This OS is not even started. Then I successfully
+                    started Manjaro. I really like this OS. This operating
+                    system is very ergonomic and functional. But I saw it not
+                    worked with my Wi-Fi device. I connected to LAN and did not
+                    see the problem in time. There are many options for choosing
+                    a Linux kernel in Manjaro. I have chosen version 6.0.0, but
+                    Wi-Fi didn't work yet. Linux Mint has the similar problem.
+                    Besides, the web camera didn't work either. I decided to
+                    stop on Ubuntu. Because, the Wi-Fi worked well. <br /><br />
+                    <h6><center>Conclusions</center></h6>
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Linux</th>
+                          <th scope="col">Endless OS</th>
+                          <th scope="col">Linux Mint</th>
+                          <th scope="col">Manjaro</th>
+                          <th scope="col">Ubuntu</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">ISO</th>
+                          <td>eos-eos4.0-amd64-amd64.220406-204708.base.iso</td>
+                          <td>linuxmint-21-cinnamon-64bit.iso</td>
+                          <td>manjaro-kde-21.3.7-220816-linux515.iso</td>
+                          <td>ubuntu-22.04.1-desktop-amd64.iso</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Mediatek MT7921 WiFi</th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #92ef73">Working</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            Internal web camera Quanta ACER HD User Facing
+                          </th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                          <td style="background-color: #ef7373">Not working</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            External web camera Sunplus Innovation Aukey-PC-LM1E
+                          </th>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #efeb73">
+                            No information
+                          </td>
+                          <td style="background-color: #92ef73">Working</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="id/GDkylMYlXDGB/index.html">Der süße Brei</a>
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="1/deutsch/index.html">deutsch</a></span
+                  ><span><a href="1/notes/index.html">notes</a></span>
+                </div>
+
+                <div>
+                  <div class="mb-2">
+                    <h6>das Zitat</h6>
+
+                    <figure>
+                      <blockquote class="blockquote">
+                        <div>
+                          Es war einmal ein armes frommes Mädchen, das lebte mit
+                          seiner Mutter allein, und sie hatten nichts mehr zu
+                          essen. Da gieng das Kind hinaus in den Wald, und
+                          begegnete ihm da eine alte Frau, die wußte seinen
+                          Jammer schon und schenkte ihm ein Töpfchen, zu dem
+                          sollt es sagen „Töpfchen, koche,“ so kochte es guten
+                          süßen Hirsenbrei, und wenn es sagte „Töpfchen, steh,“
+                          so hörte es wieder auf zu kochen. Das Mädchen brachte
+                          den Topf seiner Mutter heim, und nun waren sie ihrer
+                          Armuth und ihres Hungers ledig und aßen süßen Brei so
+                          oft sie wollten. Auf eine Zeit war das Mädchen
+                          ausgegangen, da sprach die Mutter „Töpfchen, koche,“
+                          da kocht es, und sie ißt sich satt; nun will sie daß
+                          das Töpfchen wieder aufhören soll, aber sie weiß das
+                          Wort nicht. Also kocht es fort, und der Brei steigt
+                          über den Rand hinaus und kocht immer zu, die Küche und
+                          das ganze Haus voll, und das zweite Haus und dann die
+                          Straße, als wollts die ganze Welt satt machen, und ist
+                          die größte Noth, und kein Mensch weiß sich da zu
+                          helfen. Endlich, wie nur noch ein einziges Haus übrig
+                          ist, da kommt das Kind heim, und spricht nur
+                          „Töpfchen, steh,“ da steht es und hört auf zu kochen;
+                          und wer wieder in die Stadt wollte, der mußte sich
+                          durchessen.
+                        </div>
+
+                        <br />
+
+                        <figcaption class="blockquote-footer">
+                          Brüder Grimm
+                        </figcaption>
+                      </blockquote>
+                    </figure>
+
+                    <h6>Meine Fragen:</h6>
+
+                    <ol>
+                      <li>
+                        Warum hat das Mädchen ihr Zauberwort nicht mit ihrer
+                        Mutter geteilt?
+                      </li>
+                      <li>
+                        Warum hat das Mädchen ihren süßen Brei nicht zuerst mit
+                        allen geteilt?
+                      </li>
+                      <li>
+                        Warum hat die alte Frau nur mit dem Mädchen geteilt
+                        (nicht mit allen)?
+                      </li>
+                    </ol>
+
+                    Immerhin kann das Töpfchen unendlich viel Brei kostenlos
+                    kochen.
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="id/VJnwp61rwxZk/index.html"
+                    >Print FooBar Alternately</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="1/cpp/index.html">cpp</a></span
+                  ><span><a href="1/leetcode/index.html">leetcode</a></span>
+                </div>
+
+                <div class="intro">
+                  <pre>                       
                 <code>
                 
 /*
 
-#--------------------------------#
-#                                #
-#  version 0.0.1                 #
-#                                #
-#  Aleksiej Ostrowski, 2022      #
-#                                #
-#  https://aleksiej.com          #
-#                                #
-#--------------------------------#  
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
 
 */
 
-package main
 
-import (
-    "fmt"
-)
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
 
-func longestCommonPrefix(strs []string) string {
-    if (len(strs) == 0) {
-        return ""
-    }
-    maxlen := 201
-    exclude := 0
-    for i, el := range strs {
-        len_el := len(el)
-        if (len_el == 0) {
-            return ""
-        }
-        if (len_el < maxlen) {
-            exclude = i
-            maxlen = len_el
-        }
-    }
+std::mutex m;
+std::condition_variable cv;
 
-    min_ := maxlen
-    first := &strs[exclude]
-    for i, el := range strs {
-        if (i == exclude) {
-            continue
-        }    
-        sum := 0
-        for j:=0; j < maxlen; j++ {
-            if ((*first)[j] == el[j]) {
-                sum += 1
-            } else {
-                break     
-            }
-        }
-        if (sum == 0) {
-            return ""
-        }
+int flag = 1;
 
-        if (sum < min_) {
-           min_ = sum 
-        }
-    }    
-    return (*first)[:min_]
+void task1(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 1) { 
+           std::cout &lt;&lt; "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 1;});
+        }   
+
+        if (i &gt; n) return;
+   }
 }
 
-func main() {
-    var strs = []string{"f"}
-    fmt.Println(longestCommonPrefix(strs))
+void task2(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 2) { 
+           std::cout &lt;&lt; "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
+
+        if (i &gt; n) return;
+   }
 }
+
+int main()
+{
+    flag = 1;
+
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
+
+    t1.join();
+    t2.join();
+}
+
+                
                 </code>
                 </pre>
-                                
-                
+                </div>
+              </div>
+              <!--//media-body-->
             </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
- 
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="id/RunNXdvTOAy1/index.html"
+                    >Longest Substring Without Repeating Characters</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="1/cpp/index.html">cpp</a></span
+                  ><span><a href="1/leetcode/index.html">leetcode</a></span>
+                </div>
 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="id/8MfEq38UOg5e/index.html">Roman to Integer</a></h3>
-            <div class="meta mb-1"><span><a href="1/leetcode/index.html">leetcode</a></span><span><a href="1/typescript/index.html">typescript</a></span></div>
-            
-            <div class="intro">
-            
-                <br/> <img src="static/images/13roman.png" alt="" class="img-thumbnail">
-                
-                <pre>                       
+                <div class="intro">
+                  <pre>                       
                 <code>
                 
 /*
-#--------------------------------------------------#
-#                                                  #
-#  version 0.0.1                                   #
-#  https://leetcode.com/problems/roman-to-integer  #
-#                                                  #
-#  Aleksiej Ostrowski, 2022                        #
-#                                                  #
-#  https://aleksiej.com                            #
-#                                                  #
-#--------------------------------------------------#  
+#----------------------------------------------------------------------------------------------#
+#                                                                                              #
+#  version 0.0.1                                                                               #
+#  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
+#                                                                                              #
+#  Aleksiej Ostrowski, 2020                                                                    #
+#                                                                                              #
+#  https://aleksiej.com                                                                        #
+#                                                                                              #
+#----------------------------------------------------------------------------------------------#  
 */
 
-function romanToInt(s: string): number {
-  if (s.length == 0) {
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+
+int max(const int a, const int b) {
+    if (a &gt; b) return a; else return b;
+}
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+
+        auto len_s = s.length();
+
+        if (len_s &lt;= 1) return len_s;
+
+        std::string t;
+
+        int max_len = -1;
+
+        int i = 0;
+        
+        for (;;) {
+            
+           auto found = t.find(s[i]);
+
+           if (found != -1) t = t.substr(found + 1);
+
+           t += s[i];
+
+           max_len = max(max_len, t.length());
+
+           std::cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt;  " s[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; s[i] &lt;&lt; " max_len = " &lt;&lt; max_len &lt;&lt; " string = " &lt;&lt; t &lt;&lt; std::endl;
+          
+           if (++i &gt;= len_s) break;
+        }        
+        
+        return max_len;
+    
+    }
+};
+
+int main() {
+
+    // std::string s = "aabac"; // 3
+    // std::string s = "pwwkew"; // 3
+    // std::string s = "bbbbb"; // 1
+    // std::string s = " "; // 1
+    std::string s = "aab"; // 2
+
+    std::cout &lt;&lt; "input " &lt;&lt; s &lt;&lt; std::endl;
+    auto S = Solution();
+    std::cout &lt;&lt; S.lengthOfLongestSubstring(s) &lt;&lt; std::endl;  
+
     return 0;
-  }
-
-  let res = 0;
-  let old_level = 1;
-  let max_level = -1;
-
-  //for (const el of s.split("").reverse()) {
-  for (let i = s.length - 1; i >= 0; i--) {
-    // console.log(el)
-    switch (s[i]) {
-      case "I": {
-        res = max_level > 1 ? res - 1 : res + 1;
-        old_level = 1;
-        break;
-      }
-      case "V": {
-        res = max_level > 2 ? res - 5 : res + 5;
-        old_level = 2;
-        break;
-      }
-      case "X": {
-        res = max_level > 3 ? res - 10 : res + 10;
-        old_level = 3;
-        break;
-      }
-      case "L": {
-        res = max_level > 4 ? res - 50 : res + 50;
-        old_level = 4;
-        break;
-      }
-
-      case "C": {
-        res = max_level > 5 ? res - 100 : res + 100;
-        old_level = 5;
-        break;
-      }
-
-      case "D": {
-        res = max_level > 6 ? res - 500 : res + 500;
-        old_level = 6;
-        break;
-      }
-
-      case "M": {
-        res += 1000;
-        old_level = 7;
-        break;
-      }
-    }
-
-    max_level = Math.max(max_level, old_level);
-  }
-  return res;
 }
 
-console.log(romanToInt("MCMXCIV"));
                 
                 </code>
                 </pre>
-               
-                
+                </div>
+              </div>
+              <!--//media-body-->
             </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
- 
-
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="id/Y81hhPehxRf6/index.html">Little Linux experimentation with laptop AN515-46-R70A</a></h3>
-            <div class="meta mb-1"><span><a href="1/english/index.html">english</a></span><span><a href="1/esej/index.html">esej</a></span><span><a href="1/laptop/index.html">laptop</a></span></div>
-            
-            <div class="intro">
-                            
-                I wanted to install linux on my acer laptop. But my laptop has BIOS version 1.03.
-In <a href="https://www.acer.com/ac/pl/PL/content/support-product/9334?b=1">official site</a> I saw that the latest version is 1.07. There is a Windows executable file only. Looking ahead: I tried to use <a href="https://en.wikipedia.org/wiki/Wine_(software)">wine</a> in Ubuntu to run this file. But it failed.
-Firstly, I had to install Windows. But which USB boot solution is chosen?
-On the advice of my friend, I have chosen <a href="https://github.com/ventoy/Ventoy/releases">Ventoy</a>.
-As it turned out, the BIOS firmware should reboot in DOS mode without the Windows environment.
-It was funny. After Ventoy prepared the flash card on Ubuntu, it looked as empty, but it was bootable.
-I saved the ISO Windows and Linux files for the installations to the flash drive through a simple copy operation.
-After these manipulations, I started experimenting. I downloaded the new versions of Endless OS, Linux Mint, Ubuntu and Manjaro. 
-I read that someone sells a laptop like mine with Endless OS. Therefore, I hoped to install this operating system successfully.
-But it failed. This OS is not even started. Then I successfully started Manjaro. 
-I really like this OS. This operating system is very ergonomic and functional.
-But I saw it not worked with my Wi-Fi device. I connected to LAN and did not see the problem in time.
-There are many options for choosing a Linux kernel in Manjaro. I have chosen version 6.0.0, but Wi-Fi didn't work yet.
-Linux Mint has the similar problem. Besides, the web camera didn't work either.
-I decided to stop on Ubuntu. Because, the Wi-Fi worked well.
-<br/><br/>
-<h6><center>Conclusions</center></h6>
-
-
-                <p>
-                <table class="table">
-                <thead>
-                <tr>
-                <th scope="col">Linux</th>
-                <th scope="col">Endless OS</th>
-                <th scope="col">Linux Mint</th>
-                <th scope="col">Manjaro</th>
-                <th scope="col">Ubuntu</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <th scope="row">ISO</th>
-                <td>eos-eos4.0-amd64-amd64.220406-204708.base.iso</td>
-                <td>linuxmint-21-cinnamon-64bit.iso</td>
-                <td>manjaro-kde-21.3.7-220816-linux515.iso</td>
-                <td>ubuntu-22.04.1-desktop-amd64.iso</td>
-                </tr>
-                <tr>
-                <th scope="row">Mediatek MT7921 WiFi</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#92ef73">Working</td>
-                </tr>
-                <tr>
-                <th scope="row">Internal web camera Quanta ACER HD User Facing</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                <td style="background-color:#ef7373">Not working</td>
-                </tr>
-                <tr>
-                <th scope="row">External web camera Sunplus Innovation Aukey-PC-LM1E</th>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#efeb73">No information</td>
-                <td style="background-color:#92ef73">Working</td>
-                </tr>
-                </tbody>
-                </table>
-                </p>
-  
-                 
-            </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
-
- 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="id/Z4wHRzeF1H4S/index.html">O czym opowiada film Pasożyty?</a></h3>
-            <div class="meta mb-1"><span><a href="1/esej/index.html">esej</a></span><span><a href="1/film/index.html">film</a></span><span><a href="1/polski/index.html">polski</a></span></div>
-            
-            <p class="mb-2">
-            
-Wspaniale, że można opisywać problemy klasowe w społeczeństwie poprzez grę aktorów. Nawet dzisiaj, kiedy społeczeństwo jest zupełnie niewrażliwe na twórczość kina. Ponieważ dzięki krótkiemu tik-tok filmiku możesz szybko uzyskać smażony wynik, zupełnie gotowy do połknięcia bez potrzeby filozoficznej refleksji. No co to są za problemy klasowe? Czy podział na klasy nadal jest aktualny? Nie warto tutaj przyglądać się naukowym doktrynom na ten temat. Ponieważ łatwo jest stracić cierpliwość. <u>Bong Joon-ho</u> pokazuje zróżnicowanie klasowe w bardzo prosty sposób. Na przykład reżyser zwraca uwagę na śniadanie dla psów. Dla zwykłych psów — zwykłe jedzenie. Ale dla ukochanego białego psa reżyser podrzuca inne danie — japońskie paluszki rybne. Oczywiście, podczas jedzenia psy muszą patrzeć na siebie nawzajem z poczuciem tego, że jeden z nich panuję nad pozostałymi tylko z tej racji, że jest więcej ukochany. Czy są w filmie pasożyty? Może to bogaci ludzie, którzy nie mogą znieść zapachu ubóstwa? Ponieważ bogaci ludzie nie mogą żyć w społeczeństwie bez pokojówki, osobistego szofera i korepetytorów; pasożytują biednych ludzi, atakują ich jak pchły. Pozostawiam to państwa refleksji.
-            </p>   
-                
-           
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item--> 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="id/1zS7C836bXMZ/index.html">Warum ist Schach derzeit kein sehr gutes Spiel?</a></h3>
-            <div class="meta mb-1"><span><a href="1/deutsch/index.html">deutsch</a></span><span><a href="1/esej/index.html">esej</a></span><span><a href="1/schach/index.html">schach</a></span></div>
-            
-            <p class="mb-2">
-            
-Schach ist eines der mächtigsten intellektuellen Spiele, die der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all die Jahre war Schach in einer sehr starken Position. Aber seit 30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle Kämpfe, aber warum? Ich denke, dass diese Situation mit der Entwicklung der Informatik korreliert. Computer und Algorithmen werden so schnell und effizient, dass Schach gehackt werden kann. Deshalb spielen die Leute nicht mehr so ​​gerne Schach wie früher. Der Computer kann jederzeit im Spiel helfen. Das Schlimmste ist, dass der Computer einen Menschen im Denken befreit. Hier kann man sich streiten. Allerdings, der Computer kann jedoch gute Ergebnisse erzielen. Zu wissen, dass der Computer effizient ist, verdirbt den Spaß am Spiel. Der Computer nicht zu benutzen, macht einen Menschen nicht frei. Denn auf diese Weise betrügt sich der Mensch und erlaubt sich nicht, die volle Kraft dessen zu nutzen, was überhaupt existiert. Ich denke, dass professionelle Schachspieler in der aktuellen Situation die volle Leistungsfähigkeit von Computerberatungssystemen ohne Einschränkungen nutzen sollten. So wird die Situation fair. Aber es verdirbt auch den Spaß am Spiel.
-
-            </p>   
-                
-           
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item--><nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li><li class="page-item"><a class="page-link" href="2/ALL/index.html">2</a></li><li class="page-item"><a class="page-link" href="3/ALL/index.html">3</a></li> 
-           <li class="page-item">
-              <a class="page-link" href="2/ALL/index.html">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-     </ul></nav></div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="2/ALL/index.html">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="3/ALL/index.html">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="2/ALL/index.html">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">

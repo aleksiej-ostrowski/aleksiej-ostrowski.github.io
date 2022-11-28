@@ -12,12 +12,9 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-2.css%3Fv=2.css"
     />
-    <link
-      rel="stylesheet"
-      href="../../../static/css/blog.css%3Fv=2.css"
-    />
+    <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
     <link
       rel="stylesheet"
@@ -46,14 +43,16 @@
 
   <body>
     <header class="header text-center">
-      <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html#">Aleksiej's Blog</a></h1>
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
-          data-toggle="collapse"
-          data-target="#navigation"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -61,7 +60,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -99,25 +102,22 @@
           </div>
           <!--//profile-section-->
 
-          <ul class="navbar-nav flex-column text-left">
+          <ul class="navbar-nav flex-column text-start">
             <li class="nav-item">
-              <a class="nav-link" href="../../../resume/index.html"
-                ><i class="fas fa-user fa-fw mr-2"></i>Resume</a
-              >
+              <a class="nav-link" href="../../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../../../blog/index.html"
-                ><i class="fas fa-home fa-fw mr-2"></i>Blog</a
-              >
+              <a class="nav-link" href="../../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../../../static/gallery/page1.html"
-              >
+              <a class="nav-link" href="../../../static/gallery/page1.html">
                 <svg
-                  class="svg-inline--fa fa-w-18 fa-fw mr-2"
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -133,8 +133,6 @@
                 >Gallery</a
               >
             </li>
-
-            
           </ul>
 
           <div class="my-2 my-md-3">
@@ -155,8 +153,7 @@
           <h2 class="heading">Blog</h2>
           <div class="intro">
             Welcome to my blog about programming, machine learning, philosophy,
-            and sociology.<br /><a href="../../../cloud/index.html"
-              >Tag cloud</a
+            and sociology.<br /><a href="../../../cloud/index.html">Tag cloud</a
             >&nbsp;&nbsp;<a href="../../../words/index.html">All words</a>
           </div>
 
@@ -173,55 +170,102 @@
       </section>
 
       <section class="blog-list px-3 py-5 p-md-5">
-        <div class="container"> 
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/GDkylMYlXDGB/index.html"
+                    >Der süße Brei</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../deutsch/index.html">deutsch</a></span
+                  ><span><a href="../../notes/index.html">notes</a></span>
+                </div>
 
-<div class="item mb-5">
-    <div class="media">
-        <div class="media-body">
-            <h3 class="title mb-1"><a href="../../../id/GDkylMYlXDGB/index.html">Der süße Brei</a></h3>
-            <div class="meta mb-1"><span><a href="../../deutsch/index.html">deutsch</a></span><span><a href="../../notes/index.html">notes</a></span></div>
-            
-            <div>
-            
-                das Zitat
-                <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-                <p class="mb-2">                
-                Es war einmal ein armes frommes Mädchen, das lebte mit seiner Mutter allein, und sie hatten nichts mehr zu essen. Da gieng das Kind hinaus in den Wald, und begegnete ihm da eine alte Frau, die wußte seinen Jammer schon und schenkte ihm ein Töpfchen, zu dem sollt es sagen „Töpfchen, koche,“ so kochte es guten süßen Hirsenbrei, und wenn es sagte „Töpfchen, steh,“ so hörte es wieder auf zu kochen. Das Mädchen brachte den Topf seiner Mutter heim, und nun waren sie ihrer Armuth und ihres Hungers ledig und aßen süßen Brei so oft sie wollten. Auf eine Zeit war das Mädchen ausgegangen, da sprach die Mutter „Töpfchen, koche,“ da kocht es, und sie ißt sich satt; nun will sie daß das Töpfchen wieder aufhören soll, aber sie weiß das Wort nicht. Also kocht es fort, und der Brei steigt über den Rand hinaus und kocht immer zu, die Küche und das ganze Haus voll, und das zweite Haus und dann die Straße, als wollts die ganze Welt satt machen, und ist die größte Noth, und kein Mensch weiß sich da zu helfen. Endlich, wie nur noch ein einziges Haus übrig ist, da kommt das Kind heim, und spricht nur „Töpfchen, steh,“ da steht es und hört auf zu kochen; und wer wieder in die Stadt wollte, der mußte sich durchessen.
-                </p>
-                <footer class="blockquote-footer">Brüder Grimm</footer>
-                </blockquote>
+                <div>
+                  <div class="mb-2">
+                    <h6>das Zitat</h6>
 
-                <p class="mb-2">  
-                
-                Meine Fragen:
-                
-                <ol>
-                <li>Warum hat das Mädchen ihr Zauberwort nicht mit ihrer Mutter geteilt?</li>
-                <li>Warum hat das Mädchen ihren süßen Brei nicht zuerst mit allen geteilt?</li>
-                <li>Warum hat die alte Frau nur mit dem Mädchen geteilt (nicht mit allen)? </li>
-                </ol>
-                
-                Immerhin kann das Töpfchen unendlich viel Brei kostenlos kochen.
-                </p>
-                
-                
+                    <figure>
+                      <blockquote class="blockquote">
+                        <div>
+                          Es war einmal ein armes frommes Mädchen, das lebte mit
+                          seiner Mutter allein, und sie hatten nichts mehr zu
+                          essen. Da gieng das Kind hinaus in den Wald, und
+                          begegnete ihm da eine alte Frau, die wußte seinen
+                          Jammer schon und schenkte ihm ein Töpfchen, zu dem
+                          sollt es sagen „Töpfchen, koche,“ so kochte es guten
+                          süßen Hirsenbrei, und wenn es sagte „Töpfchen, steh,“
+                          so hörte es wieder auf zu kochen. Das Mädchen brachte
+                          den Topf seiner Mutter heim, und nun waren sie ihrer
+                          Armuth und ihres Hungers ledig und aßen süßen Brei so
+                          oft sie wollten. Auf eine Zeit war das Mädchen
+                          ausgegangen, da sprach die Mutter „Töpfchen, koche,“
+                          da kocht es, und sie ißt sich satt; nun will sie daß
+                          das Töpfchen wieder aufhören soll, aber sie weiß das
+                          Wort nicht. Also kocht es fort, und der Brei steigt
+                          über den Rand hinaus und kocht immer zu, die Küche und
+                          das ganze Haus voll, und das zweite Haus und dann die
+                          Straße, als wollts die ganze Welt satt machen, und ist
+                          die größte Noth, und kein Mensch weiß sich da zu
+                          helfen. Endlich, wie nur noch ein einziges Haus übrig
+                          ist, da kommt das Kind heim, und spricht nur
+                          „Töpfchen, steh,“ da steht es und hört auf zu kochen;
+                          und wer wieder in die Stadt wollte, der mußte sich
+                          durchessen.
+                        </div>
+
+                        <br />
+
+                        <figcaption class="blockquote-footer">
+                          Brüder Grimm
+                        </figcaption>
+                      </blockquote>
+                    </figure>
+
+                    <h6>Meine Fragen:</h6>
+
+                    <ol>
+                      <li>
+                        Warum hat das Mädchen ihr Zauberwort nicht mit ihrer
+                        Mutter geteilt?
+                      </li>
+                      <li>
+                        Warum hat das Mädchen ihren süßen Brei nicht zuerst mit
+                        allen geteilt?
+                      </li>
+                      <li>
+                        Warum hat die alte Frau nur mit dem Mädchen geteilt
+                        (nicht mit allen)?
+                      </li>
+                    </ol>
+
+                    Immerhin kann das Töpfchen unendlich viel Brei kostenlos
+                    kochen.
+                  </div>
+                </div>
+              </div>
+              <!--//media-body-->
             </div>
-            
-        </div><!--//media-body-->
-    </div><!--//media-->
-    <hr/> 
-</div><!--//item-->
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
-			    <div class="item mb-5">
-				    <div class="media">
-					    <div class="media-body">
-						    <h3 class="title mb-1"><a href="../../../id/GCNqftsi5j70/index.html">Two Sum</a></h3>
-							<div class="meta mb-1">
-                                <span><a href="../../leetcode/index.html">leetcode</a></span><span><a href="../../python/index.html">python</a></span> 
-							</div>
-						    <div class="intro">
-
-<pre>					    
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/GCNqftsi5j70/index.html">Two Sum</a>
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../leetcode/index.html">leetcode</a></span
+                  ><span><a href="../../python/index.html">python</a></span>
+                </div>
+                <div class="intro">
+                  <pre>					    
 <code class="python">
 	
 #-----------------------------------------#
@@ -275,17 +319,23 @@ print(sol.twoSum())
 	
 </code>
 </pre>
-							
-							
-							
-							</div>
-							
-					    </div><!--//media-body-->
-					</div><!--//media-->
-                    <hr/> 
-				</div><!--//item-->
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
 
-<nav aria-label="Page navigation example"><ul class="pagination pagination-sm mt-3"><li class="page-item active"><a class="page-link" href="index.html#">1</a></li></ul></nav></div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <footer class="footer text-center py-2 theme-bg-dark">
