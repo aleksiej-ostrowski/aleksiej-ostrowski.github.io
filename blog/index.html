@@ -175,6 +175,47 @@
             <div class="media">
               <div class="media-body">
                 <h3 class="title mb-1">
+                  <a href="../id/i3yqDwPGDrji/index.html"
+                    >Dlaczego nie ma możliwości nauczenia kogoś matematyki?</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../1/esej/index.html">esej</a></span
+                  ><span><a href="../1/math/index.html">math</a></span
+                  ><span><a href="../1/polski/index.html">polski</a></span>
+                </div>
+
+                <div class="intro">
+                  Krótko mówiąc, nie można myśleć za kogoś. Myślenie to proces,
+                  którego nie da się perfekcyjnie trenować. Na przykład
+                  odrabianie lekcji może mieć wpływ tylko na wykonanie podobnej
+                  lekcji. Zupełnie nowe problemy są prawie niemożliwe do
+                  pokonania bez zdolności matematycznych. Jeśli chodzi o to, co
+                  uczeń może, poprzez indukcję, dedukcję oraz abstrakcję
+                  poszerzyć kręg rozwiązywanych problemów, to zjawisko pochodzi
+                  ze zdolności matematycznych. Dydaktyka matematyczna sama w
+                  sobie nie jest tu skuteczna. Oprócz tego, że uczeń wykonuje
+                  jedno zadanie, rozwiązuje je, a następnie wykonuje inne, nie
+                  ma innej formy uczenia się. Cały proces uczenia się matematyki
+                  wygląda dokładnie tak, jakby Münchhausen postanowił wyciągnąć
+                  się z koniem z bagna. Bierze się za włosy i wyciąga. Albo, jak
+                  w zdecydowanej większości przypadków, nie wyciąga. A
+                  najlepszym zachowaniem nauczyciela matematyki jest sytuacja, w
+                  której nauczyciel w niczym nie przeszkadza uczniowi. Bo nie ma
+                  możliwości skutecznego nauczenia kogoś matematyki.
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
                   <a href="../id/86FBlaC2mtHN/index.html"
                     >How to use the program Data Entry</a
                   >
@@ -515,105 +556,6 @@ int main()
 
     t1.join();
     t2.join();
-}
-
-                
-                </code>
-                </pre>
-                </div>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../id/RunNXdvTOAy1/index.html"
-                    >Longest Substring Without Repeating Characters</a
-                  >
-                </h3>
-                <div class="meta mb-1">
-                  <span><a href="../1/cpp/index.html">cpp</a></span
-                  ><span><a href="../1/leetcode/index.html">leetcode</a></span>
-                </div>
-
-                <div class="intro">
-                  <pre>                       
-                <code>
-                
-/*
-#----------------------------------------------------------------------------------------------#
-#                                                                                              #
-#  version 0.0.1                                                                               #
-#  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
-#                                                                                              #
-#  Aleksiej Ostrowski, 2020                                                                    #
-#                                                                                              #
-#  https://aleksiej.com                                                                        #
-#                                                                                              #
-#----------------------------------------------------------------------------------------------#  
-*/
-
-#include &lt;string&gt;
-#include &lt;iostream&gt;
-
-
-int max(const int a, const int b) {
-    if (a &gt; b) return a; else return b;
-}
-
-class Solution {
-public:
-    int lengthOfLongestSubstring(std::string s) {
-
-        auto len_s = s.length();
-
-        if (len_s &lt;= 1) return len_s;
-
-        std::string t;
-
-        int max_len = -1;
-
-        int i = 0;
-        
-        for (;;) {
-            
-           auto found = t.find(s[i]);
-
-           if (found != -1) t = t.substr(found + 1);
-
-           t += s[i];
-
-           max_len = max(max_len, t.length());
-
-           std::cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt;  " s[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; s[i] &lt;&lt; " max_len = " &lt;&lt; max_len &lt;&lt; " string = " &lt;&lt; t &lt;&lt; std::endl;
-          
-           if (++i &gt;= len_s) break;
-        }        
-        
-        return max_len;
-    
-    }
-};
-
-int main() {
-
-    // std::string s = "aabac"; // 3
-    // std::string s = "pwwkew"; // 3
-    // std::string s = "bbbbb"; // 1
-    // std::string s = " "; // 1
-    std::string s = "aab"; // 2
-
-    std::cout &lt;&lt; "input " &lt;&lt; s &lt;&lt; std::endl;
-    auto S = Solution();
-    std::cout &lt;&lt; S.lengthOfLongestSubstring(s) &lt;&lt; std::endl;  
-
-    return 0;
 }
 
                 
