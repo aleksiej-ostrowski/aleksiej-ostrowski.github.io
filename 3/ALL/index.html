@@ -175,6 +175,50 @@
             <div class="media">
               <div class="media-body">
                 <h3 class="title mb-1">
+                  <a href="../../id/1zS7C836bXMZ/index.html"
+                    >Warum ist Schach derzeit kein sehr gutes Spiel?</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../1/deutsch/index.html">deutsch</a></span
+                  ><span><a href="../../1/esej/index.html">esej</a></span
+                  ><span><a href="../../1/schach/index.html">schach</a></span>
+                </div>
+
+                <p class="mb-2">
+                  Schach ist eines der mächtigsten intellektuellen Spiele, die
+                  der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all
+                  die Jahre war Schach in einer sehr starken Position. Aber seit
+                  30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle
+                  Kämpfe, aber warum? Ich denke, dass diese Situation mit der
+                  Entwicklung der Informatik korreliert. Computer und
+                  Algorithmen werden so schnell und effizient, dass Schach
+                  gehackt werden kann. Deshalb spielen die Leute nicht mehr so
+                  ​​gerne Schach wie früher. Der Computer kann jederzeit im
+                  Spiel helfen. Das Schlimmste ist, dass der Computer einen
+                  Menschen im Denken befreit. Hier kann man sich streiten.
+                  Allerdings, der Computer kann jedoch gute Ergebnisse erzielen.
+                  Zu wissen, dass der Computer effizient ist, verdirbt den Spaß
+                  am Spiel. Der Computer nicht zu benutzen, macht einen Menschen
+                  nicht frei. Denn auf diese Weise betrügt sich der Mensch und
+                  erlaubt sich nicht, die volle Kraft dessen zu nutzen, was
+                  überhaupt existiert. Ich denke, dass professionelle
+                  Schachspieler in der aktuellen Situation die volle
+                  Leistungsfähigkeit von Computerberatungssystemen ohne
+                  Einschränkungen nutzen sollten. So wird die Situation fair.
+                  Aber es verdirbt auch den Spaß am Spiel.
+                </p>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
                   <a href="../../id/BOCxyBPDjzNF/index.html"
                     >Wyuczona bezradność</a
                   >
@@ -637,215 +681,6 @@ print(sol.twoSum())
           </div>
           <!--//item-->
 
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../id/pvT5fnjCkZXK/index.html">Add Two Numbers</a>
-                </h3>
-                <div class="meta mb-1">
-                  <span><a href="../../1/golang/index.html">golang</a></span
-                  ><span
-                    ><a href="../../1/leetcode/index.html">leetcode</a></span
-                  >
-                </div>
-
-                <div class="intro">
-                  <pre>                       
-                <code class="go">
-                
-/*
-
-#---------------------------------------------------#
-#                                                   #
-#  version 0.0.1                                    #
-#  https://leetcode.com/problems/add-two-numbers/   #
-#                                                   #
-#  Aleksiej Ostrowski, 2020                         #
-#                                                   #
-#  https://aleksiej.com                             #
-#                                                   #
-#---------------------------------------------------#
-
-*/
-
-package main
-
-import (
-    "fmt"
-)
-
-type ListNode struct {
-    Val  int
-    Next *ListNode
-}
-
-/*
-
-func reverseList(l *ListNode) *ListNode {
-
-    temp := []int{}
-
-    x := l
-
-    for {
-
-        if x == nil {
-            break
-        }
-
-        temp = append(temp, x.Val)
-
-        x = x.Next
-    }
-
-    // https://stackoverflow.com/questions/19239449/how-do-i-reverse-an-array-in-go
-    for i, j := 0, len(temp)-1; i < j; i, j = i+1, j-1 {
-        temp[i], temp[j] = temp[j], temp[i]
-    }
-
-    var newl = &ListNode{0, nil}
-
-    var start = newl
-
-    for i, e := range temp {
-        newl.Val = e
-        if i != len(temp)-1 {
-            newl.Next = &ListNode{0, nil}
-            newl = newl.Next
-        }
-    }
-
-    return start
-}
-*/
-
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-
-    if (l1 == nil) || (l2 == nil) {
-        return nil
-    }
-
-    x1 := l1
-    x2 := l2
-
-    var newL = &ListNode{0, nil}
-
-    var start = newL
-
-    flag1 := true
-    flag2 := true
-
-    extra := 0
-
-    for {
-
-        newVal := extra
-
-        if flag1 {
-            newVal += x1.Val
-        }
-
-        if flag2 {
-            newVal += x2.Val
-        }
-
-        extra = 0
-
-        if newVal > 9 {
-            extra = 1
-            newVal -= 10
-        }
-
-        newL.Val = newVal
-
-        if flag1 {
-            x1 = x1.Next
-            flag1 = x1 != nil
-        }
-
-        if flag2 {
-            x2 = x2.Next
-            flag2 = x2 != nil
-        }
-
-        if flag1 || flag2 || (extra > 0) {
-            newL.Next = &ListNode{0, nil}
-            newL = newL.Next
-        } else {
-            break
-        }
-    }
-
-    return start
-
-}
-
-func ListCreate(a []int) *ListNode {
-
-    var l = &ListNode{0, nil}
-
-    var start = l
-
-    for i, s := range a {
-
-        l.Val = s
-        if i != len(a)-1 {
-            l.Next = &ListNode{0, nil}
-            l = l.Next
-        }
-    }
-
-    return start
-}
-
-func printList(l *ListNode) {
-
-    x := l
-
-    for {
-
-        if x == nil {
-            break
-        }
-
-        fmt.Print(x.Val, " ")
-
-        x = x.Next
-    }
-
-    fmt.Println()
-
-}
-
-func main() {
-
-    a := []int{2, 4, 3}
-    b := []int{5, 6, 4}
-
-    l1 := ListCreate(a)
-    l2 := ListCreate(b)
-
-    printList(l1)
-    printList(l2)
-
-    printList(addTwoNumbers(l1, l2))
-
-    // 7 0 8
-}
-
-                
-                </code>
-                </pre>
-                </div>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
           <nav aria-label="post navigation">
             <ul class="pagination pagination-sm mt-3">
               <li class="page-item">
@@ -861,6 +696,14 @@ func main() {
               </li>
               <li class="page-item active">
                 <a class="page-link" href="index.html#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="../../4/ALL/ALL/index.html">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="../../4/ALL/ALL/index.html">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
               </li>
             </ul>
           </nav>
