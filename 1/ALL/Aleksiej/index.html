@@ -12,7 +12,7 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-6.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-7.css%3Fv=2.css"
     />
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
@@ -171,6 +171,65 @@
 
       <section class="blog-list px-3 py-5 p-md-5">
         <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/0kEbjRi1QbaO/index.html"
+                    >Another run is faster</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../cache/index.html">cache</a></span
+                  ><span><a href="../../cpu/index.html">cpu</a></span
+                  ><span><a href="../../golang/index.html">golang</a></span>
+                </div>
+
+                <div class="intro">
+                  It's no secret that the processor has a cache with 1,2,3
+                  levels. But what will be the efficiency when we run the same
+                  code twice. From a philosophical point of view, there is an
+                  ideal situation when the time complexity of the second run
+                  will be close to O(1). But the ideal situation is
+                  unattainable. It was decided to conduct an experiment.<br /><br />
+                  It is proposed to prepare arrays ranging in size from 1
+                  megabyte to 20 megabytes. And for these arrays, it is proposed
+                  to run the same algorithm twice in a pipe.
+
+                  <pre><code>
+data[0] = 17
+for i := 1; i &lt; size; i++ {
+    data[i] = data[i-1] + 3
+}                
+</code></pre>
+
+                  <a href="https://github.com/aleksiej-ostrowski/cpucache"
+                    >code in github.com</a
+                  >
+                  <br /><br />
+
+                  The results of the comparison are shown in the diagram.<br />
+
+                  <img
+                    src="../../../static/images/Figure_1.png"
+                    alt=""
+                    class="img-thumbnail"
+                  />
+
+                  <br /><b>Conclusion.</b> <br /><br />
+
+                  The cache greatly facilitates re-computation. If the computing
+                  structures are small, then the gain can be up to x2 for a
+                  given processor.
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
           <div class="item mb-5">
             <div class="media">
               <div class="media-body">
@@ -581,203 +640,6 @@ function romanToInt(s: string): number {
 console.log(romanToInt("MCMXCIV"));
                 
                 </code>
-                </pre>
-                </div>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../../id/MAPRXp7WNbyH/index.html"
-                    >Fancy Sequence</a
-                  >
-                </h3>
-                <div class="meta mb-1">
-                  <span><a href="../../golang/index.html">golang</a></span
-                  ><span><a href="../../leetcode/index.html">leetcode</a></span>
-                </div>
-
-                <div class="intro">
-                  <br />
-                  <img
-                    src="../../../static/images/fancy.png"
-                    alt=""
-                    class="img-thumbnail"
-                  />
-
-                  <pre>                       
-                <code class="go">
- 
- /*
-
-#-------------------------------------------------------------#
-#                                                             #
-#  version 0.0.2                                              #
-#  https://leetcode.com/problems/fancy-sequence/              #
-#                                                             #
-#  Aleksiej Ostrowski, 2021                                   #
-#                                                             #
-#  https://aleksiej.com                                       #
-#                                                             #
-#-------------------------------------------------------------#   
-
-*/
-
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-const crt = 84467440737095516 // max(uint64) = 8446744073709551615
-const md  = 1000000007
-
-type Oper struct {
-    o int8
-    v int8
-    h int32
-}
-
-type Fancy struct {
-    arr []int8
-    opr []Oper
-    cas map[int]int
-}
-
-func Constructor() Fancy {
-    return Fancy{}
-}
-
-func (this *Fancy) Append(val int)  {
-    this.arr = append(this.arr, int8(val))
-}
-
-
-func printList(l Fancy) {
-
-    for _, v := range l.arr {
-
-        fmt.Print(v, " ")
-    }
-
-    fmt.Println()
-}
-
-func (this *Fancy) AddAll(inc int)  {
-
-    this.opr = append(this.opr, Oper{-2, int8(inc), int32(len(this.arr))})
-    this.cas = make(map[int]int)
-
-    /*
-
-    for k := range this.cas {
-        delete(this.cas, k)
-    }
-
-    */
-}
-
-func (this *Fancy) MultAll(m int)  {
-
-    this.opr = append(this.opr, Oper{-1, int8(m), int32(len(this.arr))})
-    this.cas = make(map[int]int)
-
-    /*
-
-    for k := range this.cas {
-        delete(this.cas, k)
-    }
-
-    */
-}
-
-
-func (this *Fancy) GetIndex(idx int) int {
-
-    if idx < 0 || idx >= len(this.arr) {
-        return -1
-    }
-
-    if val, ok := this.cas[idx]; ok {
-        return val
-    }
-
-    var vv uint64
-
-    vv = uint64(this.arr[idx])
-    
-    for _, v := range this.opr {
-
-        if idx >= int(v.h) {
-            continue
-        }
-
-        switch os := v.o; os {
-        case -2:
-            vv += uint64(v.v)
-        case -1:
-            vv *= uint64(v.v)
-        }
-
-         if vv > crt {
-            vv = vv % md
-        }    
-    }
-
-    if vv > md {
-        vv = vv % md
-    }    
-
-    if this.cas == nil {
-        this.cas = make(map[int]int)
-    }
-
-    this.cas[idx] = int(vv)
-    
-    return int(vv)
-}
-
-func main () {
-
-    obj := Constructor()
-
-    obj.Append(2)
-    obj.Append(4)
-    obj.Append(1)
-    obj.Append(6)
-
-    printList(obj)
-
-    obj.AddAll(9)
-    obj.AddAll(1)
-    obj.MultAll(2)
-
-    fmt.Println(obj.GetIndex(0))
-
-    os.Exit(1)
-
-    obj.MultAll(9)
-    obj.AddAll(2)
-    fmt.Println(obj.GetIndex(3))
-    obj.Append(7)
-    obj.Append(5)
-    obj.Append(3)
-    obj.AddAll(4)
-    obj.MultAll(5)
-    obj.AddAll(4)
-    fmt.Println(obj.GetIndex(1))
-}
-               
-
-               </code>
                 </pre>
                 </div>
               </div>
