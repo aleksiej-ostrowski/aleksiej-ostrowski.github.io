@@ -12,7 +12,7 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-7.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-1.css%3Fv=2.css"
     />
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
@@ -171,6 +171,51 @@
 
       <section class="blog-list px-3 py-5 p-md-5">
         <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/Z4wHRzeF1H4S/index.html"
+                    >O czym opowiada film Pasożyty?</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../../1/esej/index.html">esej</a></span
+                  ><span><a href="../../../1/film/index.html">film</a></span
+                  ><span
+                    ><a href="../../../1/polski/index.html">polski</a></span
+                  >
+                </div>
+
+                <p class="mb-2">
+                  Wspaniale, że można opisywać problemy klasowe w społeczeństwie
+                  poprzez grę aktorów. Nawet dzisiaj, kiedy społeczeństwo jest
+                  zupełnie niewrażliwe na twórczość kina. Ponieważ dzięki
+                  krótkiemu tik-tok filmiku możesz szybko uzyskać smażony wynik,
+                  zupełnie gotowy do połknięcia bez potrzeby filozoficznej
+                  refleksji. No co to są za problemy klasowe? Czy podział na
+                  klasy nadal jest aktualny? Nie warto tutaj przyglądać się
+                  naukowym doktrynom na ten temat. Ponieważ łatwo jest stracić
+                  cierpliwość. <u>Bong Joon-ho</u> pokazuje zróżnicowanie
+                  klasowe w bardzo prosty sposób. Na przykład reżyser zwraca
+                  uwagę na śniadanie dla psów. Dla zwykłych psów — zwykłe
+                  jedzenie. Ale dla ukochanego białego psa reżyser podrzuca inne
+                  danie — japońskie paluszki rybne. Oczywiście, podczas jedzenia
+                  psy muszą patrzeć na siebie nawzajem z poczuciem tego, że
+                  jeden z nich panuję nad pozostałymi tylko z tej racji, że jest
+                  więcej ukochany. Czy są w filmie pasożyty? Może to bogaci
+                  ludzie, którzy nie mogą znieść zapachu ubóstwa? Ponieważ
+                  bogaci ludzie nie mogą żyć w społeczeństwie bez pokojówki,
+                  osobistego szofera i korepetytorów; pasożytują biednych ludzi,
+                  atakują ich jak pchły. Pozostawiam to państwa refleksji.
+                </p>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
           <div class="item mb-5">
             <div class="media">
               <div class="media-body">
@@ -605,83 +650,6 @@ func main() {
                 
                 </code>
                 </pre>
-                </div>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../../id/GCNqftsi5j70/index.html">Two Sum</a>
-                </h3>
-                <div class="meta mb-1">
-                  <span
-                    ><a href="../../../1/leetcode/index.html">leetcode</a></span
-                  ><span
-                    ><a href="../../../1/python/index.html">python</a></span
-                  >
-                </div>
-                <div class="intro">
-                  <pre>					    
-<code class="python">
-	
-#-----------------------------------------#
-#                                         #
-#  version 0.0.1                          #
-#  https://leetcode.com/problems/two-sum/ #
-#                                         #
-#  Aleksiej Ostrowski, 2020               #
-#                                         #
-#  https://aleksiej.com                   #
-#                                         #
-#-----------------------------------------#  
-
-from itertools import combinations
-
-class Solution(object):
-
-    def __init__(self, nums, target):
-        self.nums = nums
-        self.target = target
-
-    def twoSum(self):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-
-        new_nums = sorted(list(enumerate(self.nums)), key = lambda x: x[1])
-
-        for x in combinations(range(len(new_nums)), 2):    
-            if new_nums[x[0]][1] + new_nums[x[1]][1] == self.target:    
-                return list((new_nums[x[0]][0], new_nums[x[1]][0]))
-
-'''
-nums = [0,4,3,0]
-target = 0
-
-nums = [2, 20, 100, 7, 11, 15] 
-target = 9
-'''
-
-nums = [-3,4,3,90]
-target = 0
-
-print(nums)
-print(target)
-
-sol = Solution(nums, target)
-print(sol.twoSum())
-	
-</code>
-</pre>
                 </div>
               </div>
               <!--//media-body-->
