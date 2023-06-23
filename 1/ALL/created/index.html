@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aleksiej Ostrowski</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aleksiej Ostrowski. Personal webpage" />
+
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="../../../static/blog/assets/css/theme-6.css%3Fv=2.css"
+    />
+    <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../static/highlight/default.min.css%3Fv=2.css"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../static/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../../static/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../../static/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../../static/site.webmanifest" />
+  </head>
+
+  <body>
+    <header class="header text-center">
+      <h1 class="blog-name pt-lg-4 mb-0">
+        <a href="index.html#">Aleksiej's Blog</a>
+      </h1>
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          id="navigation"
+          class="navbar-collapse flex-column collapse"
+          style=""
+        >
+          <div class="profile-section pt-3 pt-lg-0">
+            <img
+              class="profile-image mb-3 rounded-circle mx-auto"
+              src="../../../static/images/profile.png"
+              alt="image"
+            />
+
+            <div class="bio mb-3">
+              Hi, my name is Aleksiej Ostrowski. I am a software developer with
+              a Ph.D. degree in sociology.
+
+              <!-- <br><a href="about.html">Find out more about me</a> -->
+            </div>
+            <!--//bio-->
+            <ul class="social-list list-inline py-3 mx-auto">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/_aleksiej_"
+                  ><i class="fab fa-twitter fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/ostrowski-aleksiej/"
+                  ><i class="fab fa-linkedin-in fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/aleksiej-ostrowski"
+                  ><i class="fab fa-github-alt fa-fw"></i
+                ></a>
+              </li>
+              <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-envelope-open-text fa-fw"></i></a></li> -->
+            </ul>
+            <!--//social-list-->
+            <hr />
+          </div>
+          <!--//profile-section-->
+
+          <ul class="navbar-nav flex-column text-start">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../resume/index.html">
+                <i class="fas fa-user fa-fw me-2"></i>Resume
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../../../blog/index.html">
+                <i class="fas fa-home fa-fw me-2"></i>Blog
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../../../static/gallery/page1.html">
+                <svg
+                  class="svg-inline--fa fa-w-18 fa-fw me-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                  ></path>
+                  <path
+                    d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"
+                  ></path></svg
+                >Gallery</a
+              >
+            </li>
+          </ul>
+
+          <div class="my-2 my-md-3">
+            <a
+              class="btn btn-primary"
+              href="mailto:aleksiej.ostrowski@gmail.com?subject=Letter from the blog page https://aleksiej.com&body=Hi, Aleksiej,"
+              target="_blank"
+              >Send me a message</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-wrapper">
+      <section class="cta-section theme-bg-light py-5">
+        <div class="container text-center">
+          <h2 class="heading">Blog</h2>
+          <div class="intro">
+            Welcome to my blog about programming, machine learning, philosophy,
+            and sociology.<br /><a href="../../../cloud/index.html">Tag cloud</a
+            >&nbsp;&nbsp;<a href="../../../words/index.html">All words</a>
+          </div>
+
+          <!--
+			    <form class="signup-form form-inline justify-content-center pt-3" action="http://127.0.0.1:9000/blog/" method="post" onsubmit="return not_empty();">
+                    <div class="form-group">
+                        <input id="pattern" name="pattern" class="form-control mr-md-1" placeholder="" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                -->
+        </div>
+        <!--//container-->
+      </section>
+
+      <section class="blog-list px-3 py-5 p-md-5">
+        <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/H3XOqkzQuOR6/index.html"
+                    >Steganographic experiments with video files and Youtube.
+                    Part-II</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../golang/index.html">golang</a></span
+                  ><span
+                    ><a href="../../steganography/index.html"
+                      >steganography</a
+                    ></span
+                  ><span><a href="../../youtube/index.html">youtube</a></span>
+                </div>
+
+                <div class="intro">
+                  <div class="alert alert-light" role="alert">
+                    This is a translation of the author's own article. The
+                    original article is published
+                    <a href="https://habr.com/ru/articles/742378/">here</a>
+                  </div>
+
+                  <img
+                    src="../../../static/images/albert.jpg"
+                    class="img-thumbnail"
+                  />
+                  <br />
+
+                  Since the publication of the
+                  <a href="https://habr.com/ru/post/651905/">first article</a>,
+                  some interesting tools have appeared to demonstrate the
+                  digital storage atypical capabilities of Youtube. For example,
+                  <a
+                    href="https://github.com/DvorakDwarf/Infinite-Storage-Glitch"
+                    >Infinite-Storage-Glitch</a
+                  >
+                  utility. The author of this utility, taking advantage of the
+                  reasonable placement of digital information in black and white
+                  <a
+                    href="https://stackoverflow.com/questions/27183946/what-does-cv-8uc3-and-the-other-types-stand-for-in-opencv"
+                    >CV_8UC3</a
+                  >
+                  format, successfully used Youtube, if not as a fully fledged
+                  Dropbox, then as a prototype of an alternative file storage,
+                  which led to a lot of different inspirations and generated a
+                  lot of angry reactions from users, including ethical ones.
+                  <br /><br />
+                  Perhaps the next quite obvious step in the evolution of the
+                  tool would have been to replace the
+                  <s>boring wallpaper</s> flickering black and white squares,
+                  creating only visual discomfort for the viewer, with full
+                  colour video with sound. However, what prevented the author
+                  from taking this quite expected step? Probably the fact that
+                  colour video requires a different paradigmatic approach. It is
+                  one thing to be able to record and read digital information
+                  virtually losslessly, and quite another to have to deal with
+                  an optimising video codec. However, it must be acknowledged
+                  that work in colour is still being done and there are some
+                  fruitful attempts in this direction [<a
+                    href="https://github.com/pixelomer/bin2video"
+                    >1</a
+                  >]. <br /><br />
+                  By <s>popular demand</s> of habr-users (one person asked for
+                  it in the comments), I decided to continue my own experiments
+                  and develop the software solution as a separate utility. This
+                  imposed on previous desire to implement in one evening, now in
+                  Go, without using any external steganographic libraries and
+                  other special tools, an experimental software utility, which
+                  searches the depth of steganographic capabilities of video
+                  hosting. <br /><br />
+                  It should be emphasized that the nature of the author's
+                  interest in the topic in question is rooted not in a desire to
+                  misuse Youtube, which would have been, at the very least, of
+                  dubious ethical nature, but in new opportunities opening up
+                  extremely widely at the intersection of software engineering
+                  craft and sporting excitement. It was interesting to work in a
+                  situation where the loss of information is an intractable
+                  "ontological" condition in the work of steganography. This is
+                  where the focus of research interest shone with all its
+                  colours. Because it is quite boring to steganograph a file,
+                  provided it is not purposefully modified, tested by Youtube's
+                  de-masking techniques, but used only as it was prepared.
+                  <br /><br />
+                  For science-based experiments Youtube is a very good place to
+                  experiment, as it represents the state-of-the-art and most
+                  advanced system for optimising video streams on an industrial
+                  scale and can very "intelligently" resist the urge to do
+                  anything with the video data beyond its primary use scenario.
+                  For example, Youtube has a multi-level validation and
+                  optimization strategy, delayed in time, and can optimize an
+                  uploaded file not immediately but in steps, using different
+                  techniques to do so.
+                  <br /><br />
+                  Thus, Youtube exploits the psychovisual redundancy factor to
+                  the limit. This factor is brought to the point where the
+                  indistinguishability (weak distinguishability) of details in
+                  images to the human eye allows optimization as far as the
+                  packaging algorithms proposed by engineers and the
+                  predetermined balance between the quality and size of video
+                  data storage allow.
+                  <br /><br />
+                  Therefore, the first thing to be fiercely resisted from the
+                  very first steps of the experiment is the codec's desire to
+                  get rid of small details that do not noticeably affect video
+                  quality for humans, but affect the completeness and integrity
+                  of steganography in principle. Video optimization doesn't
+                  allow using such well-known and available in steganography
+                  methods as, for example,
+                  <a
+                    href="https://www.tutorialspoint.com/what-is-least-significant-bit-algorithm-in-information-security"
+                    >Least Significant Bit insertion</a
+                  >, because codecs radically "grind" colours in the image by
+                  restructuring originally formed video containers. The metadata
+                  that is transmitted with the video file is removed. These
+                  kinds of steganographic tools prove to be "fragile" or
+                  "semi-fragile" as they are fully or partially destroyed when
+                  the codecs work. Youtube algorithms inevitably lead to loss of
+                  integrity and completeness in the stored data when it comes to
+                  our technique of "pixel burn-in" in a colour image. It is
+                  almost impossible to store data efficiently in noise as well,
+                  since noise and fine textures, as already mentioned, are
+                  optimised in the first place. <br /><br />
+                  Further, which caused the author of the article even more
+                  creative excitement and trepidation, the research programmer
+                  easily gets caught in the vicious circle of his engineering
+                  stereotypes. His quite reasonable and justified desire for
+                  reliable information storage leads to the need for multiple
+                  redundancy of containers. And the multiple redundancy
+                  situation creates new opportunities for data compression. This
+                  occurs when one portion of data is similar to another portion
+                  of data, as the total pool of images increases and new levels
+                  of storage and video optimisation are available.
+                  <br /><br />
+                  All the above has allowed the author to maintain a high degree
+                  of research interest throughout the duration of the
+                  experiments and to actively search for various robust
+                  approaches to data storage and retrieval and to coding under
+                  the conditions of providing the requirements for noise
+                  immunity.
+                  <br /><br />
+                  <h6>Ethical aspect</h6>
+                  Although the topic has already been raised once, we believe it
+                  is worth reiterating in this new context that steganography
+                  implies working with certain information in the context of
+                  keeping the very fact of such information secret. Our
+                  situation is somewhat different. For research purposes, we do
+                  not conceal our intentions, we declare it openly by adding
+                  explanations and by placing links to the materials we use,
+                  consistent with the free and fair use of software engineering
+                  tools and technologies and all the products generated by them.
+                  All our results are open and available for reproduction, study
+                  and evaluation. Steganography artefacts are also not closed,
+                  but openly fractured. We do not mislead anyone and we respect
+                  the rights of copyright holders. Moreover, we encourage
+                  everyone who happens to be involved in our work to do the
+                  same. This work consisted of determining the depth of
+                  capability of the proposed tool to ensure the sustainability
+                  of de-masking techniques of Youtube.
+                  <br /><br />
+                  <h6>Utility description</h6>
+                  The utility of the author of this article implements coding by
+                  placing in a sequence of PNG frames, into which the background
+                  video is split, conditionally hidden data by making
+                  insignificant changes in the images. The degree of
+                  "insignificance" is subjective. This degree can be adjusted,
+                  for example, by adjusting the coefficient of visual
+                  satisfaction, on the one hand, and also determined by the
+                  control of data recovery errors, on the other hand.
+                  <br /><br />
+                  The following steps can be distinguished in the utility's work
+                  cycle:
+                  <br /><br />
+                  1) Providing the necessary redundancy in the input bitstream.
+                  The experiment uses a naive approach that implements
+                  sequential data redundancy at a certain frequency. The
+                  interpretation of input and output streams as bit channels, in
+                  our opinion, successfully fits into Go's unbuffered channel
+                  type representation. We emphasize here that Go was chosen
+                  because its concepts are well suited to stream processing and
+                  it has built-in mechanisms to ensure and control its
+                  performance.
+                  <br /><br />
+                  2) Implementation of data homogeneity to ensure resistance to
+                  write corruption by mixing bytes (and, as an experimental
+                  tool, bits in bytes). Here it is a question of implementing
+                  the data whitening process — changing the byte sequence (and
+                  bits per byte as a separate option) to flatten the data
+                  distribution and remove any unwanted patterns or
+                  autocorrelations in it, primarily so that Youtube can select
+                  as few targets as possible for forced optimization based on
+                  examination of statistical properties in the data of the file
+                  taken for video-hosting.
+                  <br /><br />
+                  3) At the stage of homogeneity criterion realization Stegokey
+                  — key is used as the lowest level algorithm in steganographic
+                  persistence provision, which allows to place and then restore
+                  source data over the decoded array of bytes (including
+                  individual bits).
+                  <br /><br />
+                  4) Preparing to store binary information in the body of the
+                  background video file by "burning" individual pixels according
+                  to overlapping patterns. By and large, this method is
+                  equivalent to watermarking an image. It involves blending two
+                  images (a background image and one specially prepared to store
+                  binary information). An important goal is to find a balance
+                  between the quality of the blending and the guarantee of
+                  recoverability of the information. To achieve this, the tool
+                  uses three levels — "aggressive" level for video hosting
+                  Youtube, "experimental" level for ongoing experiments in
+                  finding the balance of parameters and "comfortable" level for
+                  simple steganography, but fragile to damage containers.
+                  <br /><br />
+                  Two 8x8 pixel zebra patterns are chosen as the patterns for
+                  storing bits of information in the image. The size is chosen
+                  empirically. These patterns are the simplest variation on the
+                  <a href="https://en.wikipedia.org/wiki/Barcode">Barcode</a>
+                  and
+                  <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a>
+                  themes. <br /><br />
+                  <img
+                    src="../../../static/images/zebra1and2.png"
+                    width="560"
+                    class="img-thumbnail"
+                  />
+                  <br />
+                  <i
+                    >Figure 1. Binary coding patterns for 2 classes (in the
+                    software implementation 1s are replaced by 255 for ease of
+                    blending)</i
+                  >
+                  <br /><br />
+                  One zebra is rotated 90° in relation to the other. This type
+                  of pattern has many practical advantages, such as the easy
+                  implementation of optical classification of the two classes
+                  and the high reliability of separation in demarcation under
+                  noisy conditions, which is achieved by contrasting pattern
+                  structures and redundancy.
+                  <br /><br />
+                  The next step is to unroll the "carpet" of such patterns
+                  according to the encoding bitstream — sequentially covering
+                  frame by frame. The remaining volume of the last frame, in
+                  order to mask the exact size of the donor file, is filled with
+                  rubbish.
+                  <br /><br />
+                  Decoding performs the reverse operation — collapsing the
+                  "carpet". This is implemented through pattern recognition in
+                  the sequence of frames pulled from the video. At first we will
+                  downloaded from Youtube video and "chewed" it up with
+                  optimization algorithms and cut it into frames as before and
+                  run the above mentioned operation for each frame.
+                  <br /><br />
+                  It should be emphasized that in the quest to counter Youtube's
+                  success in optimizing videos, in a situation where the human
+                  eye can barely see the difference between frames, it is
+                  inevitable that with the addition of our artifacts, human
+                  vision will still feel the difference. So how can we help
+                  mitigate the effects of such distortion on picture clarity?
+                  The easiest method to get rid of this flaw, in our opinion,
+                  would be to encode at a higher resolution and have the user
+                  view the video below it at one level. For example, preparing
+                  video in hd1080 resolution, and viewing hd720, etc.
+                  <br /><br />
+                  <h6>Experiment</h6>
+                  Let's carry out a simple experiment to estimate visual quality
+                  of the result of mixing in WEBM hd1080 video acceptor of the
+                  donor file. As a donor was used Pushkin's novel "Dubrovsky".
+                  The parameters were chosen in such a way that the amount of
+                  information to be mixed was within the relatively acceptable
+                  waiting time of the utility.
+                  <br /><br />
+
+                  <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">File</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Size</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">dubrowskij.txt</th>
+                        <td>File-donor</td>
+                        <td>143k</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">dubrowskij.txt.crp</th>
+                        <td>
+                          File donor, wraped by Bose-Chaudhuri-Hocquenghem
+                        </td>
+                        <td>286k</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">new_peoplenyc1080p.mp4</th>
+                        <td>Video acceptor (back video with sound)</td>
+                        <td>6,1M</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">
+                          dubrowskij.txt.crp_filesize58435200.webm
+                        </th>
+                        <td>Video for Youtube</td>
+                        <td>199M</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">
+                          dubrowskij txt crp filesize58435200 [7WhQfMocbQQ].mkv
+                        </th>
+                        <td>
+                          Downloded video from Youtube, after Youtube
+                          optimisation
+                        </td>
+                        <td>62M</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">dubrowskij.txt.youtube</th>
+                        <td>
+                          Recovered donor file (after basic decoding and
+                          recovery through correction code)
+                        </td>
+                        <td>143k</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  The following measurements are taken for the AMD Ryzen 5 6600H
+                  processor.
+                  <br /><br />
+                  Time spent on coding (without external wrappers).
+
+                  <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">real</th>
+                        <td>33m0,299s</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">user</th>
+                        <td>79m26,639s</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">sys</th>
+                        <td>0m10,871s</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  Time cost of decoding (without external wrappers)
+
+                  <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">real</th>
+                        <td>10m20,517s</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">user</th>
+                        <td>17m25,118s</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">sys</th>
+                        <td>0m12,946s</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <br />
+                  Visually, the reader is given the opportunity to assess the
+                  results for himself or herself.
+
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      class="embed-responsive-item"
+                      src="https://www.youtube.com/embed/aADa2FI6iDo?rel=0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <i
+                    >Video acceptor, hd1080 (<a
+                      href="https://www.vidsplay.com/peoplenyc-free-stock-video/"
+                      >Free People in New York City Video Footage</a
+                    >,
+                    <a
+                      href="https://freesound.org/people/iamazerrad/sounds/274347/"
+                      >sound by Iamazerrad</a
+                    >)</i
+                  >
+
+                  <br /><br />
+
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      class="embed-responsive-item"
+                      src="https://www.youtube.com/embed/7WhQfMocbQQ?rel=0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <i
+                    >Steganography after optimisation in Youtube repository,
+                    hd1080</i
+                  >
+                  <br /><br />
+
+                  <img
+                    src="../../../static/images/comfort.jpg"
+                    width="560"
+                    class="img-thumbnail"
+                  />
+                  <br />
+                  <i
+                    >Figure 2. Steganography prepared in "comfort" mode, hd1080
+                    (not for publication on Youtube as it has a "fragile"
+                    container)</i
+                  >
+                  <br /><br />
+
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      class="embed-responsive-item"
+                      src="https://www.youtube.com/embed/mHwFzTiwkqc?rel=0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <i
+                    >Steganography, comparison of "aggressive" and "comfortable"
+                    modes, hd1080</i
+                  >
+
+                  <br /><br />
+                  We can note that there are no more
+                  <s>boring wallpapers</s> flashing black and white squares. The
+                  black-and-white video has been replaced with a color picture
+                  with sound. Of course, this result was obtained with certain
+                  technical compromises and algorithmic simplifications.
+                  <br /><br />
+                  Despite some success, it should still be recognized that such
+                  methods of "burning" pixels are weakly ineffective, since they
+                  do not completely remove the problem of flickering and
+                  actualize a new problem of loss of color saturation of the
+                  image. However, the "fragile" version of steganography looks
+                  almost without flaws.
+                  <br /><br />
+                  <h6>ToDoList</h6>
+                  1. Algorithms for effective error correction are not
+                  implemented in the body of the utility, but they can be easily
+                  connected via pipe or placed in a separate wrapper utility.
+                  However, in order to optimize the entire steganography
+                  circuit, it is desirable to include them in the core of the
+                  utility with options for making targeted optimization
+                  decisions.
+                  <br /><br />
+                  2. Unfortunately, the result of the steganography of this
+                  utility does not have cryptographic strength. However, this
+                  was not in the original plans. However, as in the previous
+                  case, the initial wrapping of the file in a cryptographic
+                  "bag" with error correction removes this task from the agenda
+                  for now.
+                  <br /><br />
+                  3. Algorithmic optimization of algorithms in the Go language
+                  is still waiting for its finest hour. Now the steganographic
+                  procedure requires significant computational costs. The Go
+                  language provides a lot of convenience for refactoring code to
+                  the form when the utility can demonstrate its best sides in
+                  this aspect.
+                  <br /><br />
+                  4. A more fine-tuning of ffmpeg parameters is required when
+                  assembling the result file from separate frames, since at the
+                  moment there are certain problems with video and audio out of
+                  sync. In addition, it is easy to notice that the speed of the
+                  utility depends on the performance of this library with PNG
+                  files.
+                  <br /><br />
+                  5. It would be nice to dissolve meta-information about data in
+                  stored containers, including the size, file name, and
+                  checksum, write it into the body of the binary result,
+                  "smearing" it over the entire length of the file with an "even
+                  layer" and turn the storage into a kind of digital fractal
+                  form, when aggressive cutting of an arbitrary part of it
+                  entirely or by individual bits up to a certain threshold of
+                  sensitivity, ensuring integrity and completeness, would not
+                  lead to fatal quality losses. However, this task can also be
+                  technically reduced to the actions set out in paragraphs 1 or
+                  2 of this list.
+                  <br /><br />
+                  <h6>Conclusions</h6>
+                  1. It turned out that in practice it is quite possible to
+                  "dissolve" any binary file by placing it in the body of the
+                  video file so that at the same time the embedded data can be
+                  relatively easily and unhindered to get back later with a
+                  certain guarantee.
+                  <br /><br />
+                  2. Our own steganographic pet craft was able to withstand the
+                  basic tests and successfully pass through all the
+                  <s>circles of hell</s> millstone of internal verifications and
+                  transformations of Youtube. However, at the same time, the
+                  reader's attention should be focused on the fact that the
+                  utility currently does not meet the requirements of
+                  steganographic stability and is therefore open for completion
+                  in
+                  <a href="https://github.com/aleksiej-ostrowski/stegano2"
+                    >open source</a
+                  >
+                  mode, in the hope of evolution. <br /><br />
+                  3. According to the results of experiments, the utility
+                  received a kind of counter-motto: long, expensive,
+                  inefficient. Therefore, the created tool cannot be used by
+                  anyone to cause any harm or significant damage to video
+                  hosting sites by turning them into analogues of a dropbox.
+                  Speaking more specifically, bitwise data processing and
+                  pixel-by-pixel image processing in a computational sense are
+                  not acceptable for industrial operation of the method as a
+                  kind of competitive alternative to file storage.
+                  <br /><br />
+                  4. The implemented task opens up an even wider space for
+                  further experiments, since it allows and even targets a wide
+                  range of readers for a creative search of algorithms,
+                  processing parameters, storage, and display of video
+                  information. We hope that the combination of various
+                  algorithmic techniques, including those well described in the
+                  literature, will allow us to achieve more noticeable results
+                  in this area.
+                  <br /><br />
+                  <h6>Acknowledgements</h6>
+                  Finally the author would like to express special thanks to
+                  Andrey L. for the opportunity to discuss this tool
+                  conceptually at all stages of development and debugging.
+                  Without this support this tool would hardly "see the light at
+                  the end of the tunnel". Andrey is the author of a
+                  <a
+                    href="https://github.com/sheerluck/andrew/blob/master/codilla.py"
+                    >python script</a
+                  >
+                  for wrapping the input file with
+                  <a href="https://en.wikipedia.org/wiki/BCH_code"
+                    >Bose-Chaudhuri-Hocquenghem</a
+                  >
+                  correction code, as originally intended to provide additional
+                  guarantees of file completeness and integrity. He pointed out
+                  the need to get rid of the psychovisual problem of video
+                  flicker. In addition, the author sends his thanks to Oleg B.
+                  for sending the link to the
+                  <a
+                    href="https://github.com/DvorakDwarf/Infinite-Storage-Glitch"
+                    >Infinite-Storage-Glitch</a
+                  >
+                  utility and thereby reminding him to complete the second part
+                  of the work. Kudos to all Hubrovites who commented in the
+                  comments, and maybe even to those who didn't. All comments
+                  have been considered and proper conclusions drawn.
+                  <br /><br />
+                  <h6>Intents</h6>
+                  A new version of steganography and all the graphics can be
+                  found on the
+                  <a href="https://github.com/aleksiej-ostrowski/stegano2"
+                    >githab</a
+                  >. This set is still not a finished tool, but serves only as a
+                  working demonstration of the experiment. Bitmap processing is
+                  obviously not a good idea and so the optimization of the
+                  working stack is still waiting to be done. First of all,
+                  attention should be paid to the proper utilization of the CPU.
+                  <br /><br />
+                  At the moment the author is actively seeking opportunities to
+                  join a successful team dealing with similar or similarly
+                  popular topics to further satisfy interest in this or similar
+                  issues. Therefore, the author would be very happy to receive
+                  any reaction to the material posted. It is especially
+                  interesting if the reader is a competent decision-maker and
+                  can help with concrete steps in the author's transition from
+                  the amateur phase to the professional phase. The author will
+                  gratefully consider all suggestions for the development of the
+                  utility for any meaningful and useful purposes for society as
+                  well as the world economy.
+                  <br /><br />
+                  <h6>Literature and sources for reflection</h6>
+                  <a href="https://github.com/pixelomer/bin2video"
+                    >1. https://github.com/pixelomer/bin2video</a
+                  ><br />
+                  <a href="https://en.wikipedia.org/wiki/Error_correction_code"
+                    >2. https://en.wikipedia.org/wiki/Error_correction_code</a
+                  ><br />
+                  <a
+                    href="https://web.archive.org/web/20120905034757/http://www.eece.maine.edu/~eason/steg/SPIE98.pdf"
+                    >3.
+                    https://web.archive.org/web/20120905034757/http://www.eece.maine.edu/~eason/steg/SPIE98.pdf</a
+                  ><br />
+                  <a href="https://habr.com/en/articles/358820/"
+                    >4. https://habr.com/en/articles/358820/</a
+                  ><br />
+                  <a href="https://github.com/rondotcomYT/Infinity-Drive"
+                    >5. https://github.com/rondotcomYT/Infinity-Drive</a
+                  ><br />
+                  <a href="https://en.wikipedia.org/wiki/BPCS-steganography"
+                    >6. https://en.wikipedia.org/wiki/BPCS-steganography</a
+                  ><br />
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+          <nav aria-label="post navigation">
+            <ul class="pagination pagination-sm mt-3">
+              <li class="page-item active">
+                <a class="page-link" href="index.html#">1</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <footer class="footer text-center py-2 theme-bg-dark">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright"
+          >Designed with <i class="fas fa-heart" style="color: #fb866a"></i> by
+          <a href="http://themes.3rdwavemedia.com" target="_blank"
+            >Xiaoying Riley</a
+          >
+          for developers</small
+        >
+
+        <br />
+        <div>
+          <a href="https://clustrmaps.com/site/1brl3" title="Visit tracker"
+            ><img
+              src="http://www.clustrmaps.com/map_v2.png?d=om0lWYy5tWJEv30da2VLcUuuDCFGci2pEOWhnRKFJqo&amp;cl=ffffff"
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <!--//main-wrapper-->
+
+    <!-- Javascript -->
+    <!-- <script src="http://127.0.0.1:9000/static/js/jquery.min.js?v=2"></script> -->
+    <script src="../../../static/js/popper.min.js%3Fv=2"></script>
+    <script src="../../../static/js/bootstrap.min.js%3Fv=2"></script>
+    <script src="../../../static/js/blog.js%3Fv=2"></script>
+    <script src="../../../static/js/mark.js%3Fv=2"></script>
+
+    <script src="../../../static/highlight/highlight.min.js%3Fv=3"></script>
+    <script src="../../../static/highlight/cpp.min.js%3Fv=2"></script>
+    <script src="../../../static/highlight/go.min.js%3Fv=2"></script>
+    <script src="../../../static/highlight/typescript.min.js%3Fv=2"></script>
+
+    <!-- FontAwesome JS-->
+    <script defer src="../../../static/js/all.min.js%3Fv=2"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <script>
+      var markInstance = new Mark(document.querySelector("body"));
+      markInstance.mark("created");
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177864421-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177864421-1");
+    </script>
+  </body>
+</html>
