@@ -12,7 +12,7 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-6.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-1.css%3Fv=2.css"
     />
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
@@ -171,6 +171,118 @@
 
       <section class="blog-list px-3 py-5 p-md-5">
         <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/VJnwp61rwxZk/index.html"
+                    >Print FooBar Alternately</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../../1/cpp/index.html">cpp</a></span
+                  ><span
+                    ><a href="../../../1/leetcode/index.html">leetcode</a></span
+                  >
+                </div>
+
+                <div class="intro">
+                  <pre>                       
+                <code>
+                
+/*
+
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
+
+*/
+
+
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::mutex m;
+std::condition_variable cv;
+
+int flag = 1;
+
+void task1(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 1) { 
+           std::cout &lt;&lt; "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 1;});
+        }   
+
+        if (i &gt; n) return;
+   }
+}
+
+void task2(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 2) { 
+           std::cout &lt;&lt; "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
+
+        if (i &gt; n) return;
+   }
+}
+
+int main()
+{
+    flag = 1;
+
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
+
+    t1.join();
+    t2.join();
+}
+
+                
+                </code>
+                </pre>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
           <div class="item mb-5">
             <div class="media">
               <div class="media-body">

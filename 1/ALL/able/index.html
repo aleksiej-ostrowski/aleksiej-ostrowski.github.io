@@ -12,7 +12,7 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-6.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-1.css%3Fv=2.css"
     />
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
@@ -171,6 +171,57 @@
 
       <section class="blog-list px-3 py-5 p-md-5">
         <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/b9kP51ceWQyY/index.html"
+                    >What is the film Amelie about?</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../Amelie/index.html">Amelie</a></span
+                  ><span><a href="../../english/index.html">english</a></span
+                  ><span><a href="../../esej/index.html">esej</a></span>
+                </div>
+
+                <div class="intro">
+                  <br />
+                  <img
+                    src="../../../static/images/amelie.jpg"
+                    class="img-thumbnail"
+                  />
+                  <br />
+                  Throughout the film, Amelie behaves extraordinarily. On the
+                  one hand, this may be due to a stressful childhood. On the
+                  other hand, she lives in an imaginary world without any good
+                  reason. She wants to change everything. The real world must be
+                  like an idealist's crooked mirror. And it's no coincidence
+                  that the Paris metro stations were washed before the film was
+                  made. There is an absolute, utilitarian idealism. But what do
+                  you do when the real world isn't so good when underground
+                  stations are dirty? This method makes it very easy to catch
+                  frustration or something else. <br /><br />
+                  Maybe this film is about hedonism? About how a girl likes to
+                  break off the top of a crème brûlée and throw pebbles across
+                  the canal. Most likely, yes. Because all her aspirations: to
+                  observe details, to fantasize and dream, to make others happy,
+                  to collect and to curate — have the same root. These are
+                  phenomena of a different nature, but focused on one reason.
+                  The reason is to control the outside world, to bring it into a
+                  comfortable form that is special to her. To the form where she
+                  lives in peace and autism. But this goal overrides all of its
+                  performance. In my opinion, this is not a very interesting
+                  life path.
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
           <div class="item mb-5">
             <div class="media">
               <div class="media-body">
@@ -639,11 +690,11 @@
                   technical compromises and algorithmic simplifications.
                   <br /><br />
                   Despite some success, it should still be recognized that such
-                  methods of "burning" pixels are weakly ineffective, since they
-                  do not completely remove the problem of flickering and
-                  actualize a new problem of loss of color saturation of the
-                  image. However, the "fragile" version of steganography looks
-                  almost without flaws.
+                  methods of "burning" pixels are ineffective, since they do not
+                  completely remove the problem of flickering and actualize a
+                  new problem of loss of color saturation of the image. However,
+                  the "fragile" version of steganography looks almost without
+                  flaws.
                   <br /><br />
                   <h6>ToDoList</h6>
                   1. Algorithms for effective error correction are not
@@ -1032,120 +1083,18 @@ for i := 1; i &lt; size; i++ {
           </div>
           <!--//item-->
 
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../../id/VJnwp61rwxZk/index.html"
-                    >Print FooBar Alternately</a
-                  >
-                </h3>
-                <div class="meta mb-1">
-                  <span><a href="../../cpp/index.html">cpp</a></span
-                  ><span><a href="../../leetcode/index.html">leetcode</a></span>
-                </div>
-
-                <div class="intro">
-                  <pre>                       
-                <code>
-                
-/*
-
-#----------------------------------------------------------------------#
-#                                                                      #
-#  version 0.0.1                                                       #
-#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
-#                                                                      #
-#  Aleksiej Ostrowski, 2020                                            #
-#                                                                      #
-#  https://aleksiej.com                                                #
-#                                                                      #
-#----------------------------------------------------------------------#  
-
-*/
-
-
-#include &lt;iostream&gt;
-#include &lt;thread&gt;
-#include &lt;mutex&gt;
-#include &lt;condition_variable&gt;
-
-std::mutex m;
-std::condition_variable cv;
-
-int flag = 1;
-
-void task1(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock&lt;std::mutex&gt; lk(m);
-
-        if (flag == 1) { 
-           std::cout &lt;&lt; "foo";
-           i++;
-           flag = 2;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 1;});
-        }   
-
-        if (i &gt; n) return;
-   }
-}
-
-void task2(const int n)
-{
-    int i = 1;
-
-    for(;;) {
-
-        std::unique_lock&lt;std::mutex&gt; lk(m);
-
-        if (flag == 2) { 
-           std::cout &lt;&lt; "boo";
-           i++;
-           flag = 1;
-           lk.unlock();
-           cv.notify_all();
-        } else {
-           cv.wait(lk, []{return flag == 2;});
-        }   
-
-        if (i &gt; n) return;
-   }
-}
-
-int main()
-{
-    flag = 1;
-
-    std::thread t1(task1, 3);
-    std::thread t2(task2, 3);
-
-    t1.join();
-    t2.join();
-}
-
-                
-                </code>
-                </pre>
-                </div>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
           <nav aria-label="post navigation">
             <ul class="pagination pagination-sm mt-3">
               <li class="page-item active">
                 <a class="page-link" href="index.html#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="../../../2/ALL/able/index.html">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="../../../2/ALL/able/index.html">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
               </li>
             </ul>
           </nav>
