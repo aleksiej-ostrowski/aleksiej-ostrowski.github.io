@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Aleksiej Ostrowski</title>
@@ -12,7 +12,7 @@
     <link
       id="theme-style"
       rel="stylesheet"
-      href="../../../static/blog/assets/css/theme-1.css%3Fv=2.css"
+      href="../../../static/blog/assets/css/theme-5.css%3Fv=2.css"
     />
     <link rel="stylesheet" href="../../../static/css/blog.css%3Fv=2.css" />
 
@@ -171,6 +171,219 @@
 
       <section class="blog-list px-3 py-5 p-md-5">
         <div class="container">
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/VJnwp61rwxZk/index.html"
+                    >Print FooBar Alternately</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../../1/cpp/index.html">cpp</a></span
+                  ><span
+                    ><a href="../../../1/leetcode/index.html">leetcode</a></span
+                  >
+                </div>
+
+                <div class="intro">
+                  <pre>                       
+                <code>
+                
+/*
+
+#----------------------------------------------------------------------#
+#                                                                      #
+#  version 0.0.1                                                       #
+#  https://leetcode.com/problems/print-foobar-alternately/submissions/ # 
+#                                                                      #
+#  Aleksiej Ostrowski, 2020                                            #
+#                                                                      #
+#  https://aleksiej.com                                                #
+#                                                                      #
+#----------------------------------------------------------------------#  
+
+*/
+
+
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::mutex m;
+std::condition_variable cv;
+
+int flag = 1;
+
+void task1(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 1) { 
+           std::cout &lt;&lt; "foo";
+           i++;
+           flag = 2;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 1;});
+        }   
+
+        if (i &gt; n) return;
+   }
+}
+
+void task2(const int n)
+{
+    int i = 1;
+
+    for(;;) {
+
+        std::unique_lock&lt;std::mutex&gt; lk(m);
+
+        if (flag == 2) { 
+           std::cout &lt;&lt; "boo";
+           i++;
+           flag = 1;
+           lk.unlock();
+           cv.notify_all();
+        } else {
+           cv.wait(lk, []{return flag == 2;});
+        }   
+
+        if (i &gt; n) return;
+   }
+}
+
+int main()
+{
+    flag = 1;
+
+    std::thread t1(task1, 3);
+    std::thread t2(task2, 3);
+
+    t1.join();
+    t2.join();
+}
+
+                
+                </code>
+                </pre>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
+          <div class="item mb-5">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="title mb-1">
+                  <a href="../../../id/RunNXdvTOAy1/index.html"
+                    >Longest Substring Without Repeating Characters</a
+                  >
+                </h3>
+                <div class="meta mb-1">
+                  <span><a href="../../../1/cpp/index.html">cpp</a></span
+                  ><span
+                    ><a href="../../../1/leetcode/index.html">leetcode</a></span
+                  >
+                </div>
+
+                <div class="intro">
+                  <pre>                       
+                <code>
+                
+/*
+#----------------------------------------------------------------------------------------------#
+#                                                                                              #
+#  version 0.0.1                                                                               #
+#  https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/   #
+#                                                                                              #
+#  Aleksiej Ostrowski, 2020                                                                    #
+#                                                                                              #
+#  https://aleksiej.com                                                                        #
+#                                                                                              #
+#----------------------------------------------------------------------------------------------#  
+*/
+
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+
+int max(const int a, const int b) {
+    if (a &gt; b) return a; else return b;
+}
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+
+        auto len_s = s.length();
+
+        if (len_s &lt;= 1) return len_s;
+
+        std::string t;
+
+        int max_len = -1;
+
+        int i = 0;
+        
+        for (;;) {
+            
+           auto found = t.find(s[i]);
+
+           if (found != -1) t = t.substr(found + 1);
+
+           t += s[i];
+
+           max_len = max(max_len, t.length());
+
+           std::cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt;  " s[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; s[i] &lt;&lt; " max_len = " &lt;&lt; max_len &lt;&lt; " string = " &lt;&lt; t &lt;&lt; std::endl;
+          
+           if (++i &gt;= len_s) break;
+        }        
+        
+        return max_len;
+    
+    }
+};
+
+int main() {
+
+    // std::string s = "aabac"; // 3
+    // std::string s = "pwwkew"; // 3
+    // std::string s = "bbbbb"; // 1
+    // std::string s = " "; // 1
+    std::string s = "aab"; // 2
+
+    std::cout &lt;&lt; "input " &lt;&lt; s &lt;&lt; std::endl;
+    auto S = Solution();
+    std::cout &lt;&lt; S.lengthOfLongestSubstring(s) &lt;&lt; std::endl;  
+
+    return 0;
+}
+
+                
+                </code>
+                </pre>
+                </div>
+              </div>
+              <!--//media-body-->
+            </div>
+            <!--//media-->
+            <hr />
+          </div>
+          <!--//item-->
+
           <div class="item mb-5">
             <div class="media">
               <div class="media-body">
@@ -432,100 +645,6 @@ console.log(romanToInt("MCMXCIV"));
             <hr />
           </div>
           <!--//item-->
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../../id/1zS7C836bXMZ/index.html"
-                    >Warum ist Schach derzeit kein sehr gutes Spiel?</a
-                  >
-                </h3>
-                <div class="meta mb-1">
-                  <span
-                    ><a href="../../../1/deutsch/index.html">deutsch</a></span
-                  ><span><a href="../../../1/esej/index.html">esej</a></span
-                  ><span
-                    ><a href="../../../1/schach/index.html">schach</a></span
-                  >
-                </div>
-
-                <p class="mb-2">
-                  Schach ist eines der mächtigsten intellektuellen Spiele, die
-                  der Menschheit seit mehr als 1500 Jahren bekannt sind. Und all
-                  die Jahre war Schach in einer sehr starken Position. Aber seit
-                  30 Jahren ist Schach nicht mehr so ​​gut für intellektuelle
-                  Kämpfe, aber warum? Ich denke, dass diese Situation mit der
-                  Entwicklung der Informatik korreliert. Computer und
-                  Algorithmen werden so schnell und effizient, dass Schach
-                  gehackt werden kann. Deshalb spielen die Leute nicht mehr so
-                  ​​gerne Schach wie früher. Der Computer kann jederzeit im
-                  Spiel helfen. Das Schlimmste ist, dass der Computer einen
-                  Menschen im Denken befreit. Hier kann man sich streiten.
-                  Allerdings, der Computer kann jedoch gute Ergebnisse erzielen.
-                  Zu wissen, dass der Computer effizient ist, verdirbt den Spaß
-                  am Spiel. Der Computer nicht zu benutzen, macht einen Menschen
-                  nicht frei. Denn auf diese Weise betrügt sich der Mensch und
-                  erlaubt sich nicht, die volle Kraft dessen zu nutzen, was
-                  überhaupt existiert. Ich denke, dass professionelle
-                  Schachspieler in der aktuellen Situation die volle
-                  Leistungsfähigkeit von Computerberatungssystemen ohne
-                  Einschränkungen nutzen sollten. So wird die Situation fair.
-                  Aber es verdirbt auch den Spaß am Spiel.
-                </p>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-          <div class="item mb-5">
-            <div class="media">
-              <div class="media-body">
-                <h3 class="title mb-1">
-                  <a href="../../../id/BOCxyBPDjzNF/index.html"
-                    >Wyuczona bezradność</a
-                  >
-                </h3>
-                <div class="meta mb-1">
-                  <span><a href="../../../1/esej/index.html">esej</a></span
-                  ><span
-                    ><a href="../../../1/hikikomori/index.html"
-                      >hikikomori</a
-                    ></span
-                  ><span
-                    ><a href="../../../1/polski/index.html">polski</a></span
-                  >
-                </div>
-
-                <p class="mb-2">
-                  Co to jest? Czy dorośli mogą świadomie zrezygnować ze swoich
-                  możliwości z tego powodu, że tak im będzie lepiej w życiu?
-                  Tutaj trzeba koniecznie ustalić dokładnie, jakie są te
-                  oczekiwania. Co to w ogóle oznacza "lepiej w życiu"? Czy może
-                  na przykład <u>hikikomori</u> to właściwie typowa wyuczona
-                  bezradność? Niestety, jak to odbywa się retoryczne w
-                  dyskursie, nie można stanowczo odpowiadać na te pytania. Bo to
-                  są pytania jak najbardziej filozoficzne. Odpowiedz na te
-                  pytania całkowicie zależy od tego, kto pyta, kto jest
-                  świadkiem procesu komunikatywnego. Hikikomori ("wycofany")
-                  jako ofiara tego procesu może nie dawać sobie sprawy co się
-                  dzieje; jak świat toczy się wokół niego. A może to przykład
-                  optymalizacji życia społecznego, kiedy członkowie społeczności
-                  podświadomie rezygnują z socjalnej aktywności, w celu
-                  oszczędzania energii społecznej czy psychicznej? Mam na myśli
-                  optymalizację bardziej w stylu psychofizycznym, kiedy energia
-                  takiego rodzaju zostaje uwolniona dla przetrwania jakiegoś
-                  kryzysu. Na przykład kryzysu przeludnienia.
-                </p>
-              </div>
-              <!--//media-body-->
-            </div>
-            <!--//media-->
-            <hr />
-          </div>
-          <!--//item-->
-
           <nav aria-label="post navigation">
             <ul class="pagination pagination-sm mt-3">
               <li class="page-item">
@@ -544,6 +663,9 @@ console.log(romanToInt("MCMXCIV"));
               </li>
               <li class="page-item">
                 <a class="page-link" href="../../../4/ALL/ALL/index.html">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="../../../5/ALL/ALL/index.html">5</a>
               </li>
               <li class="page-item">
                 <a class="page-link" href="../../../4/ALL/ALL/index.html">

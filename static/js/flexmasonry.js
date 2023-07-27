@@ -38,7 +38,7 @@ var FlexMasonry = (function (e) {
             o,
             function (n) {
               return e[n];
-            }.bind(null, o)
+            }.bind(null, o),
           );
       return r;
     }),
